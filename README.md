@@ -7,14 +7,14 @@ La aplicacion esta en construccion.
 
   Antes que nada, para poder correr la aplicacion o hacerle modificaciones se debe descargar:
   
-    1. Descargar el SDK y el ADT de Android. http://developer.android.com/sdk/index.html#download 
+    1. Descargar e instalar el SDK y el ADT de Android. http://developer.android.com/sdk/index.html#download 
     
-    2. Descargar Node.js. http://nodejs.org/
+    2. Descargar e instalar Node.js. http://nodejs.org/
     
     3. Instalar PhoneGap. (sudo npm install -g phonegap)
     
     4. Seguir las instrucciones que estan en: 
-    http://docs.phonegap.com/en/3.0.0/guide_platforms_index.md.html#Platform%20Guides
+    http://docs.phonegap.com/en/1.7.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android
 
   Cualquier otra cosa que no este explicada aqui se puede revisar en la documentacion de PhoneGap:
   http://docs.phonegap.com/en/3.0.0/index.html
