@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"> </script>
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"> </script>
+
+  <link rel="stylesheet" href="css/prueba.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+  <link rel="stylesheet" href="css/bootstrap-modal.css" type="text/css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-datetimepicker.min.css">
+
+  <title>TweetCaracas</title>
+  <style>
+  body{
+    background-color:#FFF;
+    background-position: center 50px;
+    background-size: 342px 473px;
+  }
+  </style>
+  <!-- Responsive Layout -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div id="phoneBorder">
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <a href="columna.html" class="brand"  >
+         <i class="icon-chevron-left icon-white"></i>
+       </a>
+       <a class="brand" href="#" style="padding: 0px;">
+        <img id="logo" src="images/imported/LOGOOO.png"/>
+      </a>
+<!--       <span style="padding-left: 10px;color:white;font-size:large;line-height:38px;">Perfil</span> -->
+      <ul class="nav" style="float: right;">
+        <li><a href="personalizar_columna.html"><i class="icon-indent-left icon-white"></i></a></li>
+        <li><a href="reportes.html"><i class="icon-signal icon-white"></i></a></li>
+        <li><a href="settings.html"><i class="icon-wrench icon-white"></i></a></li>
+        <li><a href="#dm" data-toggle="modal"><i class="icon-envelope icon-white"></i></a></li>
+        <li><a href="#responsive" data-toggle="modal"><i class="icon-edit icon-white"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="hero-unit" style="background: #F7D358; padding: 5px; margin: 15px; margin-left: 20px; margin-right: 20px">
+    <center>
+      <img id="initAppLogo" src="images/imported/altamira.png" style="padding-top: 20px">
+      <h4><b>Lorem Altamira</b></h4>
+      <p>@loremaltamira</p>
+    </center>
+  </div>
+  <div style="margin-left: 20px; margin-right: 20px">
+    <table class="table table-bordered">
+      <tr>
+        <td>
+          <ul>
+            <center>
+              <li><b>3.000</b></li>
+              <li>Siguiendo</li>
+              <center>
+                <ul>
+                </td>
+                <td>
+                  <ul>
+                    <center>
+                      <li><b>1.000</b></li>
+                      <li>Seguidores</li>
+                      <center>
+                        <ul>
+                        </td>
+                        <td>
+                          <ul>
+                            <center>
+                              <li><b>50.000</b></li>
+                              <li>Tweets</li>
+                              <center>
+                                <ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3"><button class="btn btn-primary" style="float: right">Siguiendo</button></td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div style="margin-top: 15px" >
+                            <dl class="dl-horizontal">
+                              <dt>Nombre:</dt>
+                              <dd>Lorem Altamira</dd>
+                              <dt>Pais:</dt>
+                              <dd>Venezuela</dd>
+                              <dt>Descripcion:</dt>
+                              <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget urna tincidunt, 
+                                laoreet augue eget, adipiscing dui. Nulla malesuad
+                              </dd>
+                            </dl>
+                          </div>
+
+                          <div style="margin: 15px; margin-left: 20px; margin-right: 20px; border-radius: 3px;">
+                            <table class ="table table-bordered" style="background: #dddddd;">
+                              <tr>
+                                <td rowspan="2" style="  width: 40px; height: 40px; padding: 0px; vertical-align:middle">
+                                  <a href="perfil.html">
+                                    <img id="logo" src="images/imported/altamira.png"/>
+                                  </a>
+                                </td>
+                                <td style="padding: 0px"><b>Lorem Altamira</b>  @loremaltamira</td>
+                                <td>
+                                  <center>
+                                    <p style="margin-bottom: 0px; padding: 0px; text-align: center">7pm</p>
+                                  </center>
+                                </td>
+                                <td style="padding: 3px">
+                                  <!--               Aqui van los botones -->
+                                  <center>
+                                    <div class="btn-group">
+                                      <button class="btn" style="padding: 2px">
+                                        <i class="icon-share-alt"></i>
+                                      </button>
+                                      <button class="btn" style="padding: 2px">
+                                        <i class="icon-retweet"></i>
+                                      </button>
+                                      <button class="btn" style="padding: 2px">
+                                        <i class="icon-star"></i>
+                                      </button>
+                                      <button class="btn" style="padding: 2px">
+                                        <i class="icon-share"></i>
+                                      </button>
+                                    </div>
+                                  </center>
+                                </td>
+                              </tr>
+                              <td colspan="3" style="padding: 0px">
+                                Altamira lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget urna tincidunt, 
+                                laoreet augue eget, adipiscing dui.
+                              </td>
+                            </table>
+                          </div>                            
+
+                          <!-- Modal componer tweet     -->
+                          <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                              <h3>Componer tweet</h3>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row-fluid">
+                                <label> Contenido</label>
+                                <p><textarea class="span12" rows="3" style="resize: none;"></textarea></p>      
+                              </div>
+                              <center>
+                                <div class="btn-group">
+                                  <button class="btn">
+                                    <img id="icon" src="img/camera.png"/>
+                                  </button>
+                                  <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
+                                    <img src="img/gallery.png" style="height: 33px; width: 35px"/>
+                                  </button>
+                                  <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
+                                    <button class="btn add-on" style="height: 35px; min-width: 50px;">
+                                      <img id="icon" src="img/clock.png"/>
+                                    </button>
+                                  </div>
+                                </div>
+                              </center>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
+                              <button type="button" class="btn btn-warning">Enviar</button>
+                            </div>
+                          </div>
+
+                          <!--     Modal componer DM-->
+                          <div id="dm" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                              <h3>Componer DM</h3>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row-fluid">
+                                <label>Usuario</label>
+                                <p><input type="text" class="span12" placeholder="@Usuario"></input></p>
+                                <label> Contenido</label>
+                                <p><textarea class="span12" rows="2" style="resize: none;"></textarea></p>      
+                              </div>
+                              <center>
+                                <div class="btn-group">
+                                  <button class="btn">
+                                    <img id="icon" src="img/camera.png"/>
+                                  </button>
+                                  <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
+                                    <img src="img/gallery.png" style="height: 33px; width: 35px"/>
+                                  </button>
+<!--            <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
+              <button class="btn add-on" style="height: 35px; min-width: 50px;">
+                <img id="icon" src="img/clock.png"/>
+              </button>
+            </div>-->
+          </div>
+        </center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
+        <button type="button" class="btn btn-warning">Enviar</button>
+      </div>
+    </div> 
+  </div>
+
+  <script type="text/javascript">
+  $('#datetimepicker').datetimepicker({
+    format: 'dd/MM/yyyy hh:mm:ss',
+    language: 'pt-BR'
+  });
+  </script>
+</body>
+</html>
+
