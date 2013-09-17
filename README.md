@@ -32,6 +32,9 @@ a partir de la seccion "Run Configuration Setup", "Setup AVD" y "Launching AVD",
       ./cordova/build
       
   Para verlo en el telefono simplemente debe pasarse el archivo nombre_app-debug.apk e instalarlo en el dispositivo.
+  
+  Otros links: 
+  http://docs.phonegap.com/en/1.7.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android
 
 
 
