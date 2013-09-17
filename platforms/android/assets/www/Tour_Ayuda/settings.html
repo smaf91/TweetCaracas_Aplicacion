@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"> </script>
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"> </script>
+
+  <link rel="stylesheet" href="css/prueba.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+  <link rel="stylesheet" href="css/bootstrap-modal.css" type="text/css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-datetimepicker.min.css">
+
+  <title>TweetCaracas</title>
+  <style>
+  body{
+    background-color:#FFF;
+    background-position: center 50px;
+    background-size: 342px 473px;
+  }
+  </style>
+
+  <script type="text/javascript">  
+    $(document).ready(function () {  
+    $("#eliminar").tooltip({'placement':'bottom'});  
+    $("#ubicacion").tooltip({'placement':'top'});  
+    $("#settings").tooltip({'placement':'bottom'});  
+    $("#notificaciones").tooltip({'placement':'bottom'});  
+    });  
+
+    var contador = 0;
+    $(document).on("click","#next",function () {
+    contador = contador + 1;
+    if (contador == 1){
+    $("#eliminar").tooltip('show');  
+    }
+    else if (contador == 2){
+    $("#eliminar").tooltip('hide');  
+    $("#ubicacion").tooltip('show');  
+    }
+    else if (contador == 3){
+    $("#ubicacion").tooltip('hide');  
+    $("#notificaciones").tooltip('show');  
+    }
+    else if (contador == 4){
+    $("#action-next").attr("href","../login.html");
+    }
+    });  
+  </script>
+
+
+  <!-- Responsive Layout -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <div id="phoneBorder">
+    <div class="navbar navbar-inverse" style="margin 0px">
+      <div class="navbar-inner">
+       <a href="columna.html" class="brand"  >
+         <i class="icon-chevron-left icon-white"></i>
+       </a>
+       <a class="brand" href="#"  style="padding: 0px;">
+        <img id="logo" src="images/imported/LOGOOO.png"/>
+      </a>
+<!--       <span style="padding-left: 10px;color:white;font-size:large;line-height:38px;">Configuracion</span> -->
+      <ul class="nav" style="float: right;">
+        <li><a href="personalizar_columna.html"><i class="icon-indent-left icon-white"></i></a></li>
+        <li><a href="reportes.html"><i class="icon-signal icon-white"></i></a></li>
+        <li class="active"><a href="#" style="padding-bottom: 15px"><i class="icon-wrench icon-white"></i></a></li>
+        <li><a href="#dm" data-toggle="modal"><i class="icon-envelope icon-white"></i></a></li>
+        <li><a href="#responsive" data-toggle="modal"><i class="icon-edit icon-white"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="contentGray" style="padding-top: 10px">
+    <form>
+      <fieldset style="padding-left: 12px;">
+        <h4 style="margin-top: 0px">Cuenta</h4>
+        <div class="input-append">
+          <span class="input-large uneditable-input">@Usuario</span>
+          <div class="btn-group">
+            <button class="btn btn-danger">
+              <a href="login.html" style="text-decoration: none; color: white" id="eliminar"
+		 data-original-title="Elimina un usuario de twitter para asociar la aplicacion con otro usuario">
+                Eliminar
+              </a>  
+            </button>
+          </div>
+        </div>
+	<div id="ubicacion" data-original-title="Habilitar la ubicacion permite mostrar donde estabas cuando redactaste un tweet">
+          <label class="checkbox">
+            <input type="checkbox"> Habilitar mi ubicacion
+            </label>
+	</div>
+      </fieldset>
+    </form>
+      <div style="padding-top: 15px">
+	<div id="notificaciones" data-original-title="Personaliza que sonidos deseas escuchar para cada evento">
+	  <table class="table table-striped" style="padding-left: 20px;">
+            <thead>
+              <tr>
+		<th><h4 style="padding-left: 12px;">Notificaciones</h4></th>
+		<th>  </th>
+              </tr>
+	    </div>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding-left: 20px">Nuevo Tweet</td>
+            <td><i class="icon-circle-arrow-right"></i></td>
+          </tr>
+          <tr>
+            <td style="padding-left: 20px">Nuevo DM</td>
+            <td><i class="icon-circle-arrow-right"></i></td>
+          </tr>
+          <tr>
+            <td style="padding-left: 20px">Nuevo Mention</td>
+            <td><i class="icon-circle-arrow-right"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal componer tweet     -->
+  <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+      <h3>Componer tweet</h3>
+    </div>
+    <div class="modal-body">
+      <div class="row-fluid">
+        <label> Contenido</label>
+        <p><textarea class="span12" rows="3" style="resize: none;"></textarea></p>      
+      </div>
+      <center>
+        <div class="btn-group">
+          <button class="btn">
+            <img id="icon" src="img/camera.png"/>
+          </button>
+          <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
+            <img src="img/gallery.png" style="height: 33px; width: 35px"/>
+          </button>
+          <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
+            <button class="btn add-on" style="height: 35px; min-width: 50px;">
+              <img id="icon" src="img/clock.png"/>
+            </button>
+          </div>
+        </div>
+      </center>
+    </div>
+    <div class="modal-footer">
+      <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
+      <button type="button" class="btn btn-warning">Enviar</button>
+    </div>
+  </div>
+
+  <!--     Modal componer DM-->
+  <div id="dm" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+      <h3>Componer DM</h3>
+    </div>
+    <div class="modal-body">
+      <div class="row-fluid">
+        <label>Usuario</label>
+        <p><input type="text" class="span12" placeholder="@Usuario"></input></p>
+        <label> Contenido</label>
+        <p><textarea class="span12" rows="2" style="resize: none;"></textarea></p>      
+      </div>
+      <center>
+        <div class="btn-group">
+          <button class="btn">
+            <img id="icon" src="img/camera.png"/>
+          </button>
+          <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
+            <img src="img/gallery.png" style="height: 33px; width: 35px"/>
+          </button>
+<!--            <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
+              <button class="btn add-on" style="height: 35px; min-width: 50px;">
+                <img id="icon" src="img/clock.png"/>
+              </button>
+            </div>-->
+          </div>
+        </center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
+        <button type="button" class="btn btn-warning">Enviar</button>
+      </div>
+    </div>
+      <a id="action-next" >
+	<button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:10px; position: absolute; left: 270px; top: 403px;"
+		data-original-title="Toca la flecha para avanzar por el tutorial">
+	  &rarr;
+	</button>
+      </a>
+
+    
+    <script type="text/javascript">
+    $('#datetimepicker').datetimepicker({
+      format: 'dd/MM/yyyy hh:mm:ss',
+      language: 'pt-BR'
+    });
+    </script>
+
+  </body>
+  </html>
