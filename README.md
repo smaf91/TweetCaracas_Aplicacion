@@ -18,6 +18,7 @@ http://aerogear.org/docs/guides/CordovaAndroidDevJBDS/
 a partir de la seccion "Run Configuration Setup", "Setup AVD" y "Launching AVD", las instrucciones que se encuentran antes son para crear una aplicacion desde el IDE, se pueden ignorar, de todas maneras el command line interface de Android proporciona toda la informacion necesaria para crear un nuevo proyecto (para mas informacion: http://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface)
 
   Para construir el .apk simplemente:
+    
     Colocarse en la carpeta del proyecto y desde la terminal: 
       cordova -d build android
   
