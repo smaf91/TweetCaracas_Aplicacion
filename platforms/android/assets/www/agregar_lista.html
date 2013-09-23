@@ -52,7 +52,7 @@
 $(document).ready(function(){
   $("button").click(function(){
 //   Cambiar el URL segun la IP en donde este corriendo el servidor.
-    var data_file = "http://10.0.1.87:8000/offi91/listas_activas/"
+    var data_file = "http://10.0.1.87:8000/offi91/listas/"
     var http_request = new XMLHttpRequest();
 
    http_request.onreadystatechange  = function(){
@@ -64,8 +64,8 @@ $(document).ready(function(){
       items.push("<ul class='nav nav-pills nav-stacked'>");
       items.push("<li>");
       items.push("<a href='#' style='color: #848484; border-radius: 0; padding: 15px; margin: 0; border-top: 0.5px solid rgba(116, 116, 116, 0.20);border-bottom: 1px solid rgba(116, 116, 116, 0.20);'>");
-      items.push("<button class='btn btn-danger' style='margin-right: 10px; padding: 5px; padding-bottom: 0px; padding-top: 0px'> x </button>");
-      items.push(result[i]['nombre']);
+      items.push("<button class='btn btn-success' style='margin-right: 10px; padding: 3px; '><i class='icon-check icon-white'></i></button>");
+      items.push(result[i]['name']);
       items.push("<p style='float:right; margin: 8px;'> 10 members </p>");
       items.push("</a>");
       items.push("</li>");
@@ -85,15 +85,6 @@ $(document).ready(function(){
   });
 });
 </script>
-
-  <center>
-    <button class="btn btn-info" style="margin: 10px">
-      <a href="agregar_lista.html" style="text-decoration:none; color: #FFFFFF">
-        + Lista
-      </a>
-    </button>
-  </center>
- 
 
  <!-- Modal componer tweet     -->
  <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
@@ -128,7 +119,7 @@ $(document).ready(function(){
  </div>
 </div>
 
-<!-- 	 Modal componer DM-->
+<!--     Modal componer DM-->
 <div id="dm" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>

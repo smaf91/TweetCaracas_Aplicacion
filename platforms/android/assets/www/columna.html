@@ -89,26 +89,21 @@ $(document).ready(function(){
 //        alert(result)
        for (var i = 0, len=result.length; i<len; i++) {
       var items = []
-      items.push("<div style='border: 1px solid rgba(107, 104, 104, 0.31); border-radius: 4px'>");
-      items.push("<table class ='table table-bordered' style='margin: 0px; background: #dddddd;'>");
-      items.push("<tr>");
-      items.push("<td rowspan='2' style='  width: 40px; height: 40px; padding: 0px'>");
-      items.push("<a href='perfil.html'>");
-      $.each(result[i], function(i,field) {
-        if (i % 7 == 1) {
-          items.push("<img src='"+field+"'/>");
+      var color = ""
+          items.push("<div style='border: 1px solid rgba(107, 104, 104, 0.31); border-radius: 4px'>");
+          items.push("<table class ='table table-bordered' style='margin: 0px; border: 1px solid "+result[i]['color']+";"); 
+          items.push("background:"+result[i]['color']+";'>");
+          items.push("<tr>");
+          items.push("<td rowspan='2' style='width: 40px; height: 40px; padding: 0px; border: "+result[i]['color']+";'>");
+          items.push("<a href='perfil.html'>");
+          items.push("<img src='"+result[i]['image']+"'/>");
           items.push("</a>");
           items.push("</td>");
-        }
-        if (i % 7 == 2) {
-          items.push("<td style='padding: 0px'><b>" + field + "</b>");
-        } 
-        if (i % 7 == 3) {
-          items.push(" @" + field + "</td>");
-          items.push("<td><p style='text-align: right; margin-bottom: 0px; padding: 0px'>7pm</p></td>");
-          items.push("<td style='padding: 3px'>");
-        }
-        if (i % 7 == 4) {
+          items.push("<td style='padding: 0px; border: "+ result[i]['color'] +";'><b>" + result[i]['name'] + "</b>");
+          items.push(" @" + result[i]['screen_name'] + "</td>");
+          items.push("<td style='border-color:"+result[i]['color']+";'>");
+          items.push("<p style='text-align: right; margin-bottom: 0px; padding: 0px'>7pm</p></td>");
+          items.push("<td style='padding: 3px; border-color:" + result[i]['color'] + " ;'>");
           items.push("<center>");
           items.push("<div class='btn-group'>");
           items.push("<button class='btn' style='padding: 2px'>");
@@ -127,11 +122,9 @@ $(document).ready(function(){
           items.push("</center>");
           items.push("</td>");
           items.push("</tr>");
-          items.push("<td colspan='3' style='padding: 0px'>");
-          items.push(" " + field + " ");
+          items.push("<td colspan='3' style='padding: 0px; border-color: "+result[i]['color']+";'>");
+          items.push(" " + result[i]['text'] + " ");
           items.push("</td> </table>");
-        }
-      })
       
       $( "<ul/>", {
         "class":"my-new-list",
