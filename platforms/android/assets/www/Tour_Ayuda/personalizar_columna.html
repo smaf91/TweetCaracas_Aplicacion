@@ -48,210 +48,128 @@
 </head>
 
 <body>
-  <div id="phoneBorder">
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <a class="brand"  >
-          <i class="icon-chevron-left icon-white"></i>
-        </a>
-        <a class="brand" style="padding: 0px;">
-          <img id="logo" src="images/imported/LOGOOO.png"/>
-        </a>
-        <!--         <span style="padding-left: 10px;color:white;font-size:large;line-height:38px;">Personalizar</span> -->
-        <ul class="nav" style="float: right;">
-          <li class="active"><a style="padding-bottom: 15px"><i class="icon-indent-left icon-white"></i></a></li>
-          <li><a ><i class="icon-signal icon-white"></i></a></li>
-          <li><a ><i class="icon-wrench icon-white"></i></a></li>
-          <li><a data-toggle="modal"><i class="icon-envelope icon-white"></i></a></li>
-          <li><a data-toggle="modal"><i class="icon-edit icon-white"></i></a></li>
-        </ul>
-      </div>
-
-
-      <center>
-        <div class="columns" >
-          <h4 style="margin-top: 2px; text-align: left; margin-top: 10px">Columnas</h4>
-          <div class="hero-unit" style="width: 200px; height: 180px; margin: 0px; padding: 20px; margin-right: 50px; margin-left: 50px" id="columna" data-original-title="Agrega columnas a tu apliacion partiendo de lo que quieras, un usuario, un hashtag, o escoge colocar columnas predeterminadas como tus tweets favoritos, los tweets mas retweeteados o las actividades de los que sigues">
-            <center>
-              <ul class="columns">
-                <li class="columns">
-                  <button disabled class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px;">
-                    <a id="reg">
-                     <img id="icon" src="img/hash.svg"/>
-                     <br>Hashtag</br>
-                   </a>
-                 </button>
-               </li>
-               <li class="columns">
-                <button disabled class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px;">
-                  <a id="reg">
-                   <img id="icon" src="img/list_bullets.png"/>
-                   <br>Listas</br>
-                 </a>
-               </button>
-             </li>
-             <li  class="columns">
-              <button disabled class="btn-regular" style="padding-left: 8px; padding-right: 8px;">
-                <a id="reg">
-                 <img id="icon" src="img/user.png"/>
-                 <br>Usuarios</br>
-               </a>
-             </button>
-           </li>
-         </ul>
-         <ul class="columns">
-          <li class="columns">
-            <button disabled class="btn-regular" style="padding-left: 7px; padding-right: 7px;">
-              <a id="reg"><img id="icon" src="img/star_fav.png"/>
-                <br>Favoritos</br>
-              </a>
-            </button>
-          </li>
-          <li class="columns">
-            <button disabled class="btn-regular" style="padding-left: 14px; padding-right: 14px;">
-              <a id="reg">
-               <img id="icon" src="img/Retweet.png"/>
-               <br>+ RT</br>
-             </a>
-           </button>
-         </li>
-         <li class="columns">
-          <button disabled class="btn-regular" style="padding: 6px; padding-left: 4px; padding-right: 4px;">
-            <a id="reg">
-              <i class="icon-plus" style="margin-top: 5px"></i>
-              <img src="img/star_fav.png" style="height: 22px; width: 20px;  padding: 0px"/>
-              <br>+ favoritos</br>
-            </a>
-          </button>
-        </li>
-      </ul>
-      <ul class="columns">
-        <li class="columns">
-          <button disabled class="btn-regular" style="padding: 7px; padding-top: 1px; padding-bottom: 0px">
-            <a id="reg"><img src="img/activity.png" style="height: 35px; width: 35px"/>
-              <br>Actividad</br>
-            </a>
-          </button>
-        </li>
-        <li class="columns">
-          <button disabled class="btn-regular">
-            <a id="reg"><img id="icon" src="img/pin_map.png"/>
-              <br>Localidad</br>
-            </a>
-          </button>
-        </li>
-      </ul>
-    </div>	      
-
-    <div class="masks" >
-      <h4 style="margin-top: 2px;text-align: left">Mascaras</h4>
-      <div class="hero-unit" style="width: 200px; height: 60px; margin: 0px; padding: 20px;" id="mascara" data-original-title="Asigna un color a un usuario, a una lista o a un hashtag en particular para visualizarlos de forma mas sencilla en tus columnas">
-        <center>
-          <ul class="columns">
-            <li class="columns">
-             <button disabled class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px;">
-               <a id="reg">
-                 <img id="icon" src="img/hash.svg"/>
-                 <br>Hashtag</br>
-               </a>
-             </button>
-           </li>
-           <li class="columns">
-             <button disabled class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px;">
-               <a id="reg">
-                 <img id="icon" src="img/list_bullets.png"/>
-                 <br>Listas</br>
-               </a>
-             </button>
-           </li>
-           <li class="columns">
-             <button disabled class="btn-regular" style="padding-left: 8px; padding-right: 8px;">
-               <a id="reg">
-                 <img id="icon" src="img/user.png"/>
-                 <br>Usuarios</br>
-               </a>
-             </button>
-           </li>
-         </ul>
-       </center>
-     </div>
-   </div>
- </div>
-</center>
-
-<!-- Modal componer tweet     -->
-<div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
-  <div class="modal-header">
-    <button disabled type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-    <h3>Componer tweet</h3>
-  </div>
-  <div class="modal-body">
-    <div class="row-fluid">
-      <label> Contenido</label>
-      <p><textarea class="span12" rows="3" style="resize: none;"></textarea></p>      
-    </div>
-    <center>
-      <div class="btn-group">
-        <button disabled class="btn">
-          <img id="icon" src="img/camera.png"/>
-        </button>
-        <button disabled class="btn" style="padding-top: 0px; padding-bottom: 0px">
-          <img src="img/gallery.png" style="height: 33px; width: 35px"/>
-        </button>
-        <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
-          <button disabled class="btn add-on" style="height: 35px; min-width: 50px;">
-            <img id="icon" src="img/clock.png"/>
-          </button>
-        </div>
-      </div>
-    </center>
-  </div>
-  <div class="modal-footer">
-    <button disabled type="button" data-dismiss="modal" class="btn">Cerrar</button>
-    <button disabled type="button" class="btn btn-warning">Enviar</button>
-  </div>
+  <script type="text/javascript" src="header1.js"></script>
+  <a class="brand"  >
+    <i class="icon-chevron-left icon-white"></i>
+  </a>
+  <a class="brand" style="padding: 0px;">
+    <img id="logo" src="images/imported/LOGOOO.png"/>
+  </a>
+  <!--         <span style="padding-left: 10px;color:white;font-size:large;line-height:38px;">Personalizar</span> -->
+  <ul class="nav" style="float: right;">
+    <li class="active"><a style="padding-bottom: 15px"><i class="icon-indent-left icon-white"></i></a></li>
+    <li><a ><i class="icon-signal icon-white"></i></a></li>
+    <li><a ><i class="icon-wrench icon-white"></i></a></li>
+    <li><a data-toggle="modal"><i class="icon-envelope icon-white"></i></a></li>
+    <li><a data-toggle="modal"><i class="icon-edit icon-white"></i></a></li>
+  </ul>
 </div>
 
-<!--     Modal componer DM-->
-<div id="dm" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
-  <div class="modal-header">
-    <button disabled type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-    <h3>Componer DM</h3>
-  </div>
-  <div class="modal-body">
-    <div class="row-fluid">
-      <label>Usuario</label>
-      <p><input type="text" class="span12" placeholder="@Usuario"></input></p>
-      <label> Contenido</label>
-      <p><textarea class="span12" rows="2" style="resize: none;"></textarea></p>      
-    </div>
-    <center>
-      <div class="btn-group">
-        <button disabled class="btn">
-          <img id="icon" src="img/camera.png"/>
-        </button>
-        <button disabled class="btn" style="padding-top: 0px; padding-bottom: 0px">
-          <img src="img/gallery.png" style="height: 33px; width: 35px"/>
-        </button>
-<!--            <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
-              <button disabled class="btn add-on" style="height: 35px; min-width: 50px;">
-                <img id="icon" src="img/clock.png"/>
-              </button>
-            </div>-->
-          </div>
-        </center>
-      </div>
-      <div class="modal-footer">
-        <button disabled type="button" data-dismiss="modal" class="btn">Cerrar</button>
-        <button disabled type="button" class="btn btn-warning">Enviar</button>
-      </div>
-    </div>
-  </div>
-  <a id="action-next" >
-    <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:15px; position: absolute; left: 200px; top: 450px;"
-    data-original-title="Toca la flecha para avanzar por el tutorial">
-    &rarr;
+<!-- Columnas -->
+<script type="text/javascript" src="personalizarbody1.js"></script>
+<button disabled class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px;">
+  <a id="reg">
+   <img id="icon" src="img/hash.svg"/>
+   <br>Hashtag</br>
+ </a>
+</button>
+</li>
+<li class="columns">
+  <button disabled class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px;">
+    <a id="reg">
+     <img id="icon" src="img/list_bullets.png"/>
+     <br>Listas</br>
+   </a>
+ </button>
+</li>
+<li  class="columns">
+  <button disabled class="btn-regular" style="padding-left: 8px; padding-right: 8px;">
+    <a id="reg">
+     <img id="icon" src="img/user.png"/>
+     <br>Usuarios</br>
+   </a>
+ </button>
+</li>
+</ul>
+<ul class="columns">
+  <li class="columns">
+    <button disabled class="btn-regular" style="padding-left: 7px; padding-right: 7px;">
+      <a id="reg"><img id="icon" src="img/star_fav.png"/>
+        <br>Favoritos</br>
+      </a>
+    </button>
+  </li>
+  <li class="columns">
+    <button disabled class="btn-regular" style="padding-left: 14px; padding-right: 14px;">
+      <a id="reg">
+       <img id="icon" src="img/Retweet.png"/>
+       <br>+ RT</br>
+     </a>
+   </button>
+ </li>
+ <li class="columns">
+  <button disabled class="btn-regular" style="padding: 6px; padding-left: 4px; padding-right: 4px;">
+    <a id="reg">
+      <i class="icon-plus" style="margin-top: 5px"></i>
+      <img src="img/star_fav.png" style="height: 22px; width: 20px;  padding: 0px"/>
+      <br>+ favoritos</br>
+    </a>
   </button>
+</li>
+</ul>
+<ul class="columns">
+  <li class="columns">
+    <button disabled class="btn-regular" style="padding: 7px; padding-top: 1px; padding-bottom: 0px">
+      <a id="reg"><img src="img/activity.png" style="height: 35px; width: 35px"/>
+        <br>Actividad</br>
+      </a>
+    </button>
+  </li>
+  <li class="columns">
+    <button disabled class="btn-regular">
+      <a id="reg"><img id="icon" src="img/pin_map.png"/>
+        <br>Localidad</br>
+      </a>
+    </button>
+  </li>
+</ul>
+</div>	      
+<!-- End Columnas -->
+
+<!-- Mascaras -->
+<script type="text/javascript" src="personalizarbody2.js"></script>
+<button disabled class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px;">
+ <a id="reg">
+   <img id="icon" src="img/hash.svg"/>
+   <br>Hashtag</br>
+ </a>
+</button>
+</li>
+<li class="columns">
+ <button disabled class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px;">
+   <a id="reg">
+     <img id="icon" src="img/list_bullets.png"/>
+     <br>Listas</br>
+   </a>
+ </button>
+</li>
+<li class="columns">
+ <button disabled class="btn-regular" style="padding-left: 8px; padding-right: 8px;">
+   <a id="reg">
+     <img id="icon" src="img/user.png"/>
+     <br>Usuarios</br>
+   </a>
+ </button>
+<script type="text/javascript" src="personalizarbody3.js"></script>
+
+<!-- End Mascaras -->
+<!-- Modal no habilitados en Tutorial -->
+
+<a id="action-next" >
+  <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:15px; position: absolute; left: 200px; top: 450px;"
+  data-original-title="Toca la flecha para avanzar por el tutorial">
+  &rarr;
+</button>
 </a>
 <a href="../login.html" >
   <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 10px; padding-bottom:10px; padding-top: 10px;position: absolute; left: 330px; top: 450px;font-size:x-large;"
@@ -261,12 +179,7 @@
 </a>
 
 
-<script type="text/javascript">
-$('#datetimepicker').datetimepicker({
-  format: 'dd/MM/yyyy hh:mm:ss',
-  language: 'pt-BR'
-});
-</script>
+<!-- DatePicker no habilitado en tutorial -->
 
 </body>
 </html>

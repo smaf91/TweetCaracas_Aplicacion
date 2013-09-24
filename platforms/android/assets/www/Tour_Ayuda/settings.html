@@ -55,140 +55,63 @@
 </head>
 
 <body>
-  <script type="text/javascript" src="settingsbody.js"></script>
-  <div class="contentGray" style="padding-top: 10px">
-    <form>
-      <fieldset style="padding-left: 12px;">
-        <h4 style="margin-top: 0px">Cuenta</h4>
-        <div class="input-append">
-          <span class="input-large uneditable-input">@Usuario</span>
-          <div class="btn-group">
-            <button class="btn btn-danger" disabled>
-              <a style="text-decoration: none; color: white" id="eliminar"
-              data-original-title="Elimina un usuario de twitter para asociar la aplicacion con otro usuario">
-              Eliminar
-            </a>  
-          </button>
-        </div>
-      </div>
-    </fieldset>
-  </form>
-  <div style="padding-top: 15px">
-   <div id="notificaciones" data-original-title="Personaliza que sonidos deseas escuchar para cada evento">
-     <table class="table table-striped" style="padding-left: 20px;">
-      <thead>
-        <tr>
-          <th><h4 style="padding-left: 12px;">Notificaciones</h4></th>
-          <th>  </th>
-        </tr>
-      </div>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding-left: 20px">Nuevo Tweet</td>
-        <td><i class="icon-circle-arrow-right"></i></td>
-      </tr>
-      <tr>
-        <td style="padding-left: 20px">Nuevo DM</td>
-        <td><i class="icon-circle-arrow-right"></i></td>
-      </tr>
-      <tr>
-        <td style="padding-left: 20px">Nuevo Mention</td>
-        <td><i class="icon-circle-arrow-right"></i></td>
-      </tr>
-    </tbody>
-  </table>
+  <script type="text/javascript" src="header1.js"></script>
+  <a  class="brand"  >
+   <i class="icon-chevron-left icon-white"></i>
+ </a>
+ <a class="brand" style="padding: 0px;">
+   <img id="logo" src="images/imported/LOGOOO.png"/>
+ </a>
+ <ul class="nav" style="float: right;">
+  <li><a ><i class="icon-indent-left icon-white"></i></a></li>
+  <li><a ><i class="icon-signal icon-white"></i></a></li>
+  <li class="active"><a style="padding-bottom: 15px"><i class="icon-wrench icon-white"></i></a></li>
+  <li><a data-toggle="modal"><i class="icon-envelope icon-white"></i></a></li>
+  <li><a data-toggle="modal"><i class="icon-edit icon-white"></i></a></li>
+</ul>
 </div>
 </div>
 
-<!-- Modal componer tweet     -->
-<div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-    <h3>Componer tweet</h3>
-  </div>
-  <div class="modal-body">
-    <div class="row-fluid">
-      <label> Contenido</label>
-      <p><textarea class="span12" rows="3" style="resize: none;"></textarea></p>      
-    </div>
-    <center>
-      <div class="btn-group">
-        <button class="btn">
-          <img id="icon" src="img/camera.png"/>
-        </button>
-        <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
-          <img src="img/gallery.png" style="height: 33px; width: 35px"/>
-        </button>
-        <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
-          <button class="btn add-on" style="height: 35px; min-width: 50px;">
-            <img id="icon" src="img/clock.png"/>
-          </button>
-        </div>
-      </div>
-    </center>
-  </div>
-  <div class="modal-footer">
-    <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
-    <button type="button" class="btn btn-warning">Enviar</button>
-  </div>
+<script type="text/javascript" src="settingsbody1.js"></script>
+<div class="input-append">
+  <span class="input-large uneditable-input">@Usuario</span>
+  <div class="btn-group">
+    <button class="btn btn-danger" disabled>
+      <a style="text-decoration: none; color: white" id="eliminar"
+      data-original-title="Elimina un usuario de twitter para asociar la aplicacion con otro usuario">
+      Eliminar
+    </a>  
+  </button>
 </div>
+</div>
+<script type="text/javascript" src="settingsbody2.js"></script>
+<td><i class="icon-circle-arrow-right"></i></td>
+</tr>
+<tr>
+  <td style="padding-left: 20px">Nuevo DM</td>
+  <td><i class="icon-circle-arrow-right"></i></td>
+</tr>
+<tr>
+  <td style="padding-left: 20px">Nuevo Mention</td>
+  <td><i class="icon-circle-arrow-right"></i></td>
+<script type="text/javascript" src="settingsbody3.js"></script>
 
-<!--     Modal componer DM-->
-<div id="dm" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-    <h3>Componer DM</h3>
-  </div>
-  <div class="modal-body">
-    <div class="row-fluid">
-      <label>Usuario</label>
-      <p><input type="text" class="span12" placeholder="@Usuario"></input></p>
-      <label> Contenido</label>
-      <p><textarea class="span12" rows="2" style="resize: none;"></textarea></p>      
-    </div>
-    <center>
-      <div class="btn-group">
-        <button class="btn">
-          <img id="icon" src="img/camera.png"/>
-        </button>
-        <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
-          <img src="img/gallery.png" style="height: 33px; width: 35px"/>
-        </button>
-<!--            <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
-              <button class="btn add-on" style="height: 35px; min-width: 50px;">
-                <img id="icon" src="img/clock.png"/>
-              </button>
-            </div>-->
-          </div>
-        </center>
-      </div>
-      <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
-        <button type="button" class="btn btn-warning">Enviar</button>
-      </div>
-    </div>
-    <a id="action-next" >
-      <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:15px; position: absolute; left: 200px; top: 450px;"
-     data-original-title="Toca la flecha para avanzar por el tutorial">
-     &rarr;
-     </button>
-   </a>
-    <a href="../login.html" >
-      <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 10px; padding-bottom:10px; padding-top: 10px;position: absolute; left: 330px; top: 450px;;font-size:x-large;"
-     data-original-title="Toca Salir para volver a la pantalla de inicio">
-     Salir
-     </button>
-   </a>
+<!-- Modals que no habilitados en Tutorial -->
 
+<a id="action-next" >
+  <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:15px; position: absolute; left: 200px; top: 450px;"
+  data-original-title="Toca la flecha para avanzar por el tutorial">
+  &rarr;
+</button>
+</a>
+<a href="../login.html" >
+  <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 10px; padding-bottom:10px; padding-top: 10px;position: absolute; left: 330px; top: 450px;;font-size:x-large;"
+  data-original-title="Toca Salir para volver a la pantalla de inicio">
+  Salir
+</button>
+</a>
 
-
- <script type="text/javascript">
- $('#datetimepicker').datetimepicker({
-  format: 'dd/MM/yyyy hh:mm:ss',
-  language: 'pt-BR'
-});
- </script>
+<!-- DatePicker no habilitado en tutorial -->
 
 </body>
 </html>
