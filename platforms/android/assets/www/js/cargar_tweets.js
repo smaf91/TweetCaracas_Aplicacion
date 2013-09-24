@@ -2,11 +2,14 @@ $(document).ready(function(){
     //   Cambiar el URL segun la IP en donde este corriendo el servidor.
     var data_file = "http://127.0.0.1:8000/Offi91/columnas/timeline/"
     var http_request = new XMLHttpRequest();
-
+   
+    
     http_request.onreadystatechange  = function(){
 	if (http_request.readyState == 4  )
 	{
 	    // Javascript function JSON.parse to parse JSON data
+	    
+	    // alert(http_request.responseText);
 	    var result = JSON.parse(http_request.responseText);
 
 	    // result variable now contains the data structure and can
@@ -59,7 +62,9 @@ $(document).ready(function(){
 	    }
 	}
     }
+    
     http_request.open("GET", data_file, true);
+    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("Offi91" + ':' + "12345"));
     http_request.send();
 
 });
