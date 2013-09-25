@@ -62,6 +62,7 @@
     $("#action-next").attr("data-toggle","modal");
     $("#action-next").attr("href","#responsive");
     $("#next").css("z-index","2000");
+    $("#salir").css("z-index","2000");
     }
     else if (contador == 6){
     $("#tweet").tooltip('hide');
@@ -279,12 +280,17 @@
     </div>     
   </div>
       <a id="action-next" >
-	<button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px;position: absolute; left: 270px; top: 403px;"
+	<button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px;position: absolute; left: 180px; top: 450px;"
 		data-original-title="Toca la flecha para avanzar por el tutorial">
 	  &rarr;
 	</button>
       </a>
-
+      <a href="../login.html">
+	<button id="salir" type="button" class="btn btn-warning" style="font-size: 20px; padding-top: 5px; position: absolute; left: 110px; top: 450px"
+		data-original-title="Toca para salir del tutorial">
+	  Salir
+	</button>
+      </a>
   <script type="text/javascript">
   $('#datetimepicker').datetimepicker({
     format: 'dd/MM/yyyy hh:mm:ss',
