@@ -25,47 +25,67 @@
 </head>
 
 <body>
-  <script type="text/javascript" src="Tour_Ayuda/header1.js"></script>
-  <a href="columna.html" class="brand"  >
-   <i class="icon-chevron-left icon-white"></i>
- </a>
- <a class="brand" href="#"  style="padding: 0px;">
-  <img id="logo" src="images/imported/LOGOOO.png"/>
-</a>
+  <div id="phoneBorder">
+    <div class="navbar navbar-inverse" style="margin 0px">
+      <div class="navbar-inner">
+       <a href="columna.html" class="brand"  >
+         <i class="icon-chevron-left icon-white"></i>
+       </a>
+       <a class="brand" href="#"  style="padding: 0px;">
+        <img id="logo" src="images/imported/LOGOOO.png"/>
+      </a>
 <!--       <span style="padding-left: 10px;color:white;font-size:large;line-height:38px;">Configuracion</span> -->
-<ul class="nav" style="float: right;">
-  <li><a href="personalizar_columna.html"><i class="icon-indent-left icon-white"></i></a></li>
-  <li><a href="reportes.html"><i class="icon-signal icon-white"></i></a></li>
-  <li class="active"><a href="#" style="padding-bottom: 15px"><i class="icon-wrench icon-white"></i></a></li>
-  <li><a href="#dm" data-toggle="modal"><i class="icon-envelope icon-white"></i></a></li>
-  <li><a href="#responsive" data-toggle="modal"><i class="icon-edit icon-white"></i></a></li>
-</ul>
-</div>
-</div>
-
-<script type="text/javascript" src="Tour_Ayuda/settingsbody1.js"></script>
-<div class="input-append">
-  <span class="input-large uneditable-input">@Usuario</span>
-  <div class="btn-group">
-    <button class="btn btn-danger">
-      <a href="login.html" style="text-decoration: none; color: white">
-        Eliminar
-      </a>  
-    </button>
+      <ul class="nav" style="float: right;">
+        <li><a href="personalizar_columna.html"><i class="icon-indent-left icon-white"></i></a></li>
+        <li><a href="reportes.html"><i class="icon-signal icon-white"></i></a></li>
+        <li class="active"><a href="#" style="padding-bottom: 15px"><i class="icon-wrench icon-white"></i></a></li>
+        <li><a href="#dm" data-toggle="modal"><i class="icon-envelope icon-white"></i></a></li>
+        <li><a href="#responsive" data-toggle="modal"><i class="icon-edit icon-white"></i></a></li>
+      </ul>
+    </div>
   </div>
-</div>
-<script type="text/javascript" src="Tour_Ayuda/settingsbody2.js"></script>
-<td><i class="icon-circle-arrow-right"></i></td>
-</tr>
-<tr>
-  <td style="padding-left: 20px">Nuevo DM</td>
-  <td><i class="icon-circle-arrow-right"></i></td>
-</tr>
-<tr>
-  <td style="padding-left: 20px">Nuevo Mention</td>
-  <td><i class="icon-circle-arrow-right"></i></td>
-  <script type="text/javascript" src="Tour_Ayuda/settingsbody3.js"></script>
-  
+
+  <div class="contentGray" style="padding-top: 10px">
+    <form>
+      <fieldset style="padding-left: 12px;">
+        <h4 style="margin-top: 0px">Cuenta</h4>
+        <div class="input-append">
+          <span class="input-large uneditable-input">@Usuario</span>
+          <div class="btn-group">
+            <button class="btn btn-danger">
+              <a href="login.html" style="text-decoration: none; color: white">
+                Eliminar
+              </a>  
+            </button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <div style="padding-top: 15px">
+      <table class="table table-striped" style="padding-left: 20px;">
+        <thead>
+          <tr>
+            <th><h4 style="padding-left: 12px;">Notificaciones</h4></th>
+            <th>  </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding-left: 20px">Nuevo Tweet</td>
+            <td><i class="icon-circle-arrow-right"></i></td>
+          </tr>
+          <tr>
+            <td style="padding-left: 20px">Nuevo DM</td>
+            <td><i class="icon-circle-arrow-right"></i></td>
+          </tr>
+          <tr>
+            <td style="padding-left: 20px">Nuevo Mention</td>
+            <td><i class="icon-circle-arrow-right"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
   <!-- Modal componer tweet     -->
   <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
