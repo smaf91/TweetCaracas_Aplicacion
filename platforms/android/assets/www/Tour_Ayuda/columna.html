@@ -116,21 +116,22 @@
          </ul>
        </div>
      </div>
+     
 
      <form class="form-search" style="float:right; padding-right:10px; padding-top:5px; margin-bottom:5px">
-      <input disabled id="searchbar"  placeholder="Buscar" type="text" class="input-medium search-query" style="width:260px" data-provide="typeahead"/>
-      <button disabled type="submit" class="btn btn-warning" style="padding:7px"><i class="icon-search icon-white" ></i></button>
+      <input id="searchbar" placeholder="Buscar" type="text" class="input-medium search-query" style="width:260px" data-provide="typeahead"/>
+      <button type="submit" class="btn btn-warning" style="padding:7px"><i class="icon-search icon-white" ></i></button>
     </form>
     <div style="margin-bottom:5px"> 
       <ul class="pager">
         <li style="float:left; padding-left: 10px">
-          <a style="color: rgb(25, 29, 31)" id="flechal" data-original-title="Ver otra columna">&larr;</a>
-        </li>
-        <li style="float:right; padding-right: 10px">
-          <a style="color: rgb(25, 29, 31)" id="flechar" data-original-title="Ver otra columna" >&rarr;</a>
+          <a href="altamira.html" style="color: rgb(25, 29, 31)">&larr;</a>
         </li>
         <li>
-          <div style="height:20px; width: 180px;overflow:hidden;"><p><b>Timeline</b></p></div>
+          <p style="height:30px; width: 270px; "> <b>Timeline</b></p>
+        </li>
+        <li style="float:right; padding-right: 10px">
+          <a href="altamira.html" style="color: rgb(25, 29, 31)" >&rarr;</a>
         </li>
       </ul>
     </div>
@@ -208,7 +209,7 @@
           </td>
         </table>
         <!-- FINAL Tweets ejemplo -->
-        
+
         <!-- Modals Componer Tweet-->
         <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
           <div class="modal-header">
@@ -244,20 +245,21 @@
 
         <!-- Modal ComponerDM no habilitado en Tutorial -->
 
-        <a id="action-next" >
-          <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:15px; position: absolute; left: 200px; top: 450px;"
-          data-original-title="Toca la flecha para avanzar por el tutorial">
-          &rarr;
-        </button>
-      </a>
-      <a href="../login.html" >
-        <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 10px; padding-bottom:10px; padding-top: 10px;position: absolute; left: 330px; top: 450px;;font-size:x-large;"
-        data-original-title="Toca Salir para volver a la pantalla de inicio">
-        Salir
-      </button>
-    </a>
+        <div style="margin-left:50px;">
+          <a id="action-next" >
+            <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:15px; position: absolute; top: 450px;"
+            data-original-title="Toca la flecha para avanzar por el tutorial">
+            &rarr;
+          </button>
+        </a>
+        <a href="../login.html" >
+          <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 10px; padding-bottom:10px; padding-top: 10px;position: absolute; top: 450px;margin-left: 100px;font-size:x-large;" data-original-title="Toca Salir para volver a la pantalla de inicio">
+            Salir
+          </button>
+        </a>
+      </div>
 
-    <!-- Scripts no habilitados en Tutorial -->
-  </body>
-  </html>
+      <!-- Scripts no habilitados en Tutorial -->
+    </body>
+    </html>
 
