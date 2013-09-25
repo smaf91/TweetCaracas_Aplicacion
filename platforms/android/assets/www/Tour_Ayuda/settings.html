@@ -23,7 +23,6 @@
   <script type="text/javascript">  
     $(document).ready(function () {  
     $("#eliminar").tooltip({'placement':'bottom'});  
-    $("#ubicacion").tooltip({'placement':'top'});  
     $("#settings").tooltip({'placement':'bottom'});  
     $("#notificaciones").tooltip({'placement':'bottom'});  
     });  
@@ -36,13 +35,9 @@
     }
     else if (contador == 2){
     $("#eliminar").tooltip('hide');  
-    $("#ubicacion").tooltip('show');  
-    }
-    else if (contador == 3){
-    $("#ubicacion").tooltip('hide');  
     $("#notificaciones").tooltip('show');  
     }
-    else if (contador == 4){
+    else if (contador == 3){
     $("#action-next").attr("href","../login.html");
     }
     });  
@@ -90,11 +85,11 @@
             </button>
           </div>
         </div>
-	<div id="ubicacion" data-original-title="Habilitar la ubicacion permite mostrar donde estabas cuando redactaste un tweet">
-          <label class="checkbox">
-            <input type="checkbox"> Habilitar mi ubicacion
-            </label>
-	</div>
+	<!-- <div id="ubicacion" data-original-title="Habilitar la ubicacion permite mostrar donde estabas cuando redactaste un tweet"> -->
+        <!--   <label class="checkbox"> -->
+        <!--     <input type="checkbox"> Habilitar mi ubicacion -->
+        <!--     </label> -->
+	<!-- </div> -->
       </fieldset>
     </form>
       <div style="padding-top: 15px">
