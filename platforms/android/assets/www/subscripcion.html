@@ -8,12 +8,15 @@
   
   <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-
+  
   <style>
+  
   body{
     background-image:url('images/imported/caracas-parque-nacional-el-avila-1280x800.jpg');
   }
+  
   </style>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
 </head>
@@ -25,34 +28,51 @@
       <h6 style="background-color:rgba(100,100,100,0.2);margin:15px;color:white;padding:5px;border-radius: 10px;">
         Para poder crear una cuenta, por favor ingrese en este 
         <a href="#" style=""> link </a>, copie el PIN indicado y posteriormente rellene los campos solicitados. </h6>
-      <form class="form-horizontal">
-        <div class="control-group">
-          <div class="controls" style="margin: 0px">
-            <input type="text" id="inputEmail" placeholder="Usuario">
+
+        
+        <form class="form-horizontal" id="form" method="post" action="">
+          <div class="control-group">
+            <div class="controls" style="margin: 0px">
+              <input type="text" id="inputEmail" placeholder="Usuario">
+            </div>
           </div>
-        </div>
-        <div class="control-group">
-          <div class="controls" style="margin: 0px">
-            <input type="password" id="inputPassword" placeholder="Contrasena">
+          <div class="control-group">
+            <div class="controls" style="margin: 0px">
+              <input type="password" id="inputPassword" name="inputPassword" placeholder="Contrasena">
+            </div>
           </div>
-        </div>
-        <div class="control-group success">
-          <div class="controls" style="margin: 0px">
-            <input type="password" id="inputPassword" placeholder="Confirmar Contrasena">
+          <div class="control-group">
+            <div class="controls" style="margin: 0px">
+              <input type="password" id="inputPasswordConfirm" name="inputPasswordConfirm" placeholder="Confirmar Contrasena" onblur="confirmPass()" >
+            </div>
           </div>
-        </div>
-        <div class="control-group">
-          <div class="controls" style="margin: 0px">
-            <input type="text" placeholder="PIN">
+          <div class="control-group">
+            <div class="controls" style="margin: 0px">
+              <input type="text" placeholder="PIN">
+            </div>
           </div>
-        </div>
-        <button type="submit" class="btn btn-info">
-          <a href="login.html" style="color: white; text-decoration: none">
-            Crear Cuenta
-          </a>
-        </button>
-      </form>
-    </center>
-  </div>
-</body>
-</html>
+          <button type="submit" class="btn btn-info">
+            <a href="login.html" style="color: white; text-decoration: none">
+              Crear Cuenta
+            </a>
+          </button>
+        </form>
+      </center>
+    </div>
+
+<script type="text/javascript">
+
+  function confirmPass() {
+      var pass = document.getElementById("inputPassword").value
+      var confPass = document.getElementById("inputPasswordConfirm").value
+      if(pass != confPass) {
+          alert('Contrasenas no coinciden.');
+      }
+
+  }
+
+</script>
+
+
+  </body>
+  </html>
