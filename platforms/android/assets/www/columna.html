@@ -12,6 +12,9 @@
   <script type="text/javascript" src="js/bootstrap-typeahead.js"> </script>
   <script type="text/javascript" src="js/base64.js"> </script>
   <script type="text/javascript" src="js/cargar_tweets.js"> </script>
+  <script type="text/javascript" src="js/bootstrap-limit.js"> </script>
+
+  <script> $('.limit').limit() </script>
   
 
   <link rel="stylesheet" href="css/prueba.css" type="text/css" />
@@ -79,8 +82,11 @@
           <div class="modal-body">
             <div class="row-fluid">
               <label> Contenido</label>
-              <p><textarea class="span12" rows="3" style="resize: none;"></textarea></p>      
+              <p><textarea class="span12" rows="3" style="resize: none;" data-provide="limit" data-counter="#counter" ></textarea></p>      
             </div>
+
+	    <!-- Contador de caracteres (Javascript lo agarra y lo modifica cuando escribes) -->
+	    <p id="counter"></p>
             <center>
               <div class="btn-group">
                 <button class="btn">
