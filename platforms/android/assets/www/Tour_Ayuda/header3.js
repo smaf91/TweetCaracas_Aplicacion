@@ -1,4 +1,0 @@
-document.write("\
-               </div>\
-               </div>\
-               ");
