@@ -1,15 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-  <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"> </script>
-  <script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"> </script>
+  <script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.js"></script>
+  <script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js"> </script>
+  <script type="text/javascript" src="../js/bootstrap-datetimepicker.pt-BR.js"> </script>
 
-  <link rel="stylesheet" href="css/prueba.css" type="text/css" />
-  <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
-  <link rel="stylesheet" href="css/bootstrap-modal.css" type="text/css"/>
-  <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="../css/prueba.css" type="text/css" />
+  <link rel="stylesheet" href="../css/bootstrap.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/bootstrap-modal.css" type="text/css"/>
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-datetimepicker.min.css">
 
   <title>TweetCaracas</title>
   <style>
@@ -55,7 +55,7 @@
           <i class="icon-chevron-left icon-white"></i>
         </a>
         <a class="brand" style="padding: 0px;">
-          <img id="logo" src="images/imported/LOGOOO.png"/>
+          <img id="logo" src="../images/imported/LOGOOO.png"/>
         </a>
         <!--         <span style="padding-left: 10px;color:white;font-size:large;line-height:38px;">Personalizar</span> -->
         <ul class="nav" style="float: right;">
@@ -69,79 +69,58 @@
 
 
       <center>
-        <div class="columns" >
+<div class="columns" >
           <h4 style="margin-top: 2px; text-align: left; margin-top: 10px">Columnas</h4>
-          <div class="hero-unit" style="width: 200px; height: 180px; margin: 0px; padding: 20px; margin-right: 50px; margin-left: 50px" id="columna" data-original-title="Agrega columnas a tu apliacion partiendo de lo que quieras, un usuario, un hashtag, o escoge colocar columnas predeterminadas como tus tweets favoritos, los tweets mas retweeteados o las actividades de los que sigues">
+          <div class="hero-unit" style="padding: 20px; margin-right: 50px; margin-left: 50px" id="columna" data-original-title="Agrega columnas a tu apliacion partiendo de lo que quieras, un usuario, un hashtag, o escoge colocar columnas predeterminadas como tus tweets favoritos, los tweets mas retweeteados o las actividades de los que sigues">
             <center>
               <ul class="columns">
                 <li class="columns">
-                  <button disabled class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px;">
-                    <a id="reg">
-                     <img id="icon" src="img/hash.svg"/>
+                  <button class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px; margin-bottom: 15px; margin-top: 15px;">
+                    <a href="#" id="reg">
+                     <img id="icon" src="../img/hash.svg"/>
                      <br>Hashtag</br>
                    </a>
                  </button>
                </li>
                <li class="columns">
-                <button disabled class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px;">
-                  <a id="reg">
-                   <img id="icon" src="img/list_bullets.png"/>
+                <button class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px; margin-bottom: 15px; margin-top: 15px;">
+                  <a href="#" id="reg">
+                   <img id="icon" src="../img/list_bullets.png"/>
                    <br>Listas</br>
                  </a>
                </button>
              </li>
-             <li  class="columns">
-              <button disabled class="btn-regular" style="padding-left: 8px; padding-right: 8px;">
-                <a id="reg">
-                 <img id="icon" src="img/user.png"/>
-                 <br>Usuarios</br>
-               </a>
-             </button>
-           </li>
-         </ul>
-         <ul class="columns">
-          <li class="columns">
-            <button disabled class="btn-regular" style="padding-left: 7px; padding-right: 7px;">
-              <a id="reg"><img id="icon" src="img/star_fav.png"/>
-                <br>Favoritos</br>
-              </a>
-            </button>
-          </li>
-          <li class="columns">
-            <button disabled class="btn-regular" style="padding-left: 14px; padding-right: 14px;">
-              <a id="reg">
-               <img id="icon" src="img/Retweet.png"/>
-               <br>+ RT</br>
+             <li class="columns"><button class="btn-regular" style="padding-left: 8px; padding-right: 8px; margin-bottom: 15px; margin-top: 15px;">
+              <a href="#" id="reg">
+               <img id="icon" src="../img/user.png"/>
+               <br>Usuarios</br>
              </a>
            </button>
          </li>
-         <li class="columns">
-          <button disabled class="btn-regular" style="padding: 6px; padding-left: 4px; padding-right: 4px;">
-            <a id="reg">
-              <i class="icon-plus" style="margin-top: 5px"></i>
-              <img src="img/star_fav.png" style="height: 22px; width: 20px;  padding: 0px"/>
-              <br>+ favoritos</br>
-            </a>
-          </button>
-        </li>
-      </ul>
-      <ul class="columns">
+       </ul>
+       <ul class="columns">
         <li class="columns">
-          <button disabled class="btn-regular" style="padding: 7px; padding-top: 1px; padding-bottom: 0px">
-            <a id="reg"><img src="img/activity.png" style="height: 35px; width: 35px"/>
-              <br>Actividad</br>
+          <button class="btn-regular" style="padding-left: 7px; padding-right: 7px;">
+            <a href="#" id="reg"><img id="icon" src="../img/star_fav.png"/>
+              <br>Favoritos</br>
             </a>
           </button>
         </li>
-        <li class="columns">
-          <button disabled class="btn-regular">
-            <a id="reg"><img id="icon" src="img/pin_map.png"/>
-              <br>Localidad</br>
-            </a>
-          </button>
-        </li>
-      </ul>
-    </div>	      
+      <li class="columns">
+        <button class="btn-regular" style="padding: 7px; padding-top: 1px; padding-bottom: 0px">
+          <a href="#" id="reg"><img src="../img/activity.png" style="height: 35px; width: 35px"/>
+            <br>Actividad</br>
+          </a>
+        </button>
+      </li>
+      <li class="columns"><button class="btn-regular">
+        <a href="#" id="reg"><img id="icon" src="../img/pin_map.png"/>
+          <br>Localidad</br>
+        </a>
+      </button>
+    </li>
+  </ul>
+</div>       
 
     <div class="masks" >
       <h4 style="margin-top: 2px;text-align: left">Mascaras</h4>
@@ -151,7 +130,7 @@
             <li class="columns">
              <button disabled class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px;">
                <a id="reg">
-                 <img id="icon" src="img/hash.svg"/>
+                 <img id="icon" src="../img/hash.svg"/>
                  <br>Hashtag</br>
                </a>
              </button>
@@ -159,7 +138,7 @@
            <li class="columns">
              <button disabled class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px;">
                <a id="reg">
-                 <img id="icon" src="img/list_bullets.png"/>
+                 <img id="icon" src="../img/list_bullets.png"/>
                  <br>Listas</br>
                </a>
              </button>
@@ -167,7 +146,7 @@
            <li class="columns">
              <button disabled class="btn-regular" style="padding-left: 8px; padding-right: 8px;">
                <a id="reg">
-                 <img id="icon" src="img/user.png"/>
+                 <img id="icon" src="../img/user.png"/>
                  <br>Usuarios</br>
                </a>
              </button>
@@ -247,18 +226,20 @@
       </div>
     </div>
   </div>
-  <a id="action-next" >
-    <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:15px; position: absolute; left: 200px; top: 450px;"
-    data-original-title="Toca la flecha para avanzar por el tutorial">
-    &rarr;
-  </button>
-</a>
-<a href="../login.html" >
-  <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 10px; padding-bottom:10px; padding-top: 10px;position: absolute; left: 330px; top: 450px;font-size:x-large;"
-  data-original-title="Toca Salir para volver a la pantalla de inicio">
-  Salir
-</button>
-</a>
+  <center>
+    <a href="../login.html">
+      <button id="salir" type="button" class="btn btn-warning" style="margin-top: 20px; font-size: 20px; padding-top: 5px; left: 110px; top: 450px"
+      data-original-title="Toca para salir del tutorial">
+      Salir
+      </button>
+    </a>
+    <a id="action-next" >
+      <button id="next" type="button" class="btn btn-warning" style="margin-top: 20px; font-size: 50px; padding: 5px; left: 180px; top: 450px;"
+      data-original-title="Toca la flecha para avanzar por el tutorial">
+      &rarr;
+      </button>
+    </a>
+  </center>
 
 
 <script type="text/javascript">
