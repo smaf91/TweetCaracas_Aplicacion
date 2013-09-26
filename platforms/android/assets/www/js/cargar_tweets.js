@@ -1,7 +1,7 @@
 $(document).ready(function(){
     //   Cambiar el URL segun la IP en donde este corriendo el servidor.
-//     var data_file = "http://10.0.1.87:8000/offi91/columnas/timeline/"
-    var data_file = "http://127.0.0.1:8000/Offi91/columnas/timeline/"
+    var data_file = "http://10.0.1.87:8000/offi91/columnas/timeline/"
+//     var data_file = "http://127.0.0.1:8000/Offi91/columnas/timeline/"
     var http_request = new XMLHttpRequest();
    
     
@@ -19,13 +19,13 @@ $(document).ready(function(){
 	    for (var i = 0, len=result.length; i<len; i++) {
 		var items = []
 		var color = ""
-		items.push("<div style='border: 1px solid rgba(107, 104, 104, 0.31); border-radius: 4px'>");
+		items.push("<div style='margin: 5px; border: 1px solid rgba(107, 104, 104, 0.31); border-radius: 4px'>");
 		items.push("<table class ='table table-bordered' style='margin: 0px; border: 1px solid "+result[i]['color']+";"); 
 		items.push("background:"+result[i]['color']+";'>");
 		items.push("<tr>");
 		items.push("<td rowspan='2' style='width: 40px; height: 40px; padding: 0px; border: "+result[i]['color']+";'>");
 		items.push("<a href='perfil.html'>");
-		items.push("<img src='"+result[i]['image']+"'/>");
+		items.push("<img style='border-radius: 4px' src='"+result[i]['image']+"'/>");
 		items.push("</a>");
 		items.push("</td>");
 		items.push("<td style='padding: 0px; border: "+ result[i]['color'] +";'><b>" + result[i]['name'] + "</b>");
@@ -53,7 +53,7 @@ $(document).ready(function(){
 		items.push("</tr>");
 		items.push("<td colspan='3' style='padding: 0px; border-color: "+result[i]['color']+";'>");
 		items.push(" " + result[i]['text'] + " ");
-		items.push("</td> </table>");
+		items.push("</td> </table> </div>");
 		
 		$( "<ul/>", {
 		    "class":"my-new-list",
@@ -65,8 +65,8 @@ $(document).ready(function(){
     }
     
     http_request.open("GET", data_file, true);
-//     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
-    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("smaf91" + ':' + "12345"));
+    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
+//     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("smaf91" + ':' + "12345"));
     http_request.send();
 
 });
