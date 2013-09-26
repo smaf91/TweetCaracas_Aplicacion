@@ -20,87 +20,91 @@
     background-size: 342px 473px;
   }
   .tooltip {
-    z-index: 2000 !important;
+  z-index: 2000 !important;
   }
   </style>
 
-  <script type="text/javascript">
-  $(document).ready(function () {
-    $("#columna").tooltip({'placement':'bottom'});
-    $("#reportes").tooltip({'placement':'bottom'});
-    $("#settings").tooltip({'placement':'bottom'});
-    $("#dm").tooltip({'placement':'bottom'});
-    $("#tweet").tooltip({'placement':'bottom'});
-    $("#flechal").tooltip({'placement':'right'});
-    $("#flechar").tooltip({'placement':'left'});
-    $("#datetimepicker").tooltip({'placement':'bottom'});
-    $("#galeria").tooltip({'placement':'bottom'});
-    $("#camara").tooltip({'placement':'bottom'});
-  });
-
-  var contador = 0;
-  $(document).on("click","#next",function () {
+  <script type="text/javascript">  
+    $(document).ready(function () {  
+    $("#columna").tooltip({'placement':'bottom'});  
+    $("#reportes").tooltip({'placement':'bottom'});  
+    $("#settings").tooltip({'placement':'bottom'});  
+    $("#dm").tooltip({'placement':'bottom'});  
+    $("#tweet").tooltip({'placement':'bottom'});  
+    $("#flechal").tooltip({'placement':'right'});  
+    $("#flechar").tooltip({'placement':'left'});  
+    $("#datetimepicker").tooltip({'placement':'bottom'});  
+    $("#galeria").tooltip({'placement':'bottom'});  
+    $("#camara").tooltip({'placement':'bottom'});  
+    });  
+    
+    var contador = 0;
+    $(document).on("click","#next",function () {
     contador = contador + 1;
     if (contador == 1){
-      $("#columna").tooltip('show');
+    $("#columna").tooltip('show');  
     }
     else if (contador == 2){
-      $("#columna").tooltip('hide');
-      $("#reportes").tooltip('show');
+    $("#columna").tooltip('hide');  
+    $("#reportes").tooltip('show');  
     }
     else if (contador == 3){
-      $("#reportes").tooltip('hide');
-      $("#settings").tooltip('show');
+    $("#reportes").tooltip('hide');  
+    $("#settings").tooltip('show');  
     }
     else if (contador == 4){
-      $("#settings").tooltip('hide');
-      $("#dm").tooltip('show');
+    $("#settings").tooltip('hide');  
+    $("#dm").tooltip('show');  
     }
     else if (contador == 5){
-      $("#dm").tooltip('hide');
-      $("#tweet").tooltip('show');
-      $("#action-next").attr("data-toggle","modal");
-      $("#action-next").attr("href","#responsive");
-      $("#next").css("z-index","2000");
+    $("#dm").tooltip('hide');  
+    $("#tweet").tooltip('show');  
+    $("#action-next").attr("data-toggle","modal");
+    $("#action-next").attr("href","#responsive");
+    $("#next").css("z-index","2000");
+    $("#salir").css("z-index","2000");
     }
     else if (contador == 6){
-      $("#tweet").tooltip('hide');
-      $("#action-next").removeAttr("data-toggle");
-      $("#action-next").removeAttr("href");
+    $("#tweet").tooltip('hide');
+    $("#action-next").removeAttr("data-toggle");
+    $("#action-next").removeAttr("href");
     }
     else if (contador == 7){
-      $("#camara").tooltip('show');
+    $("#camara").tooltip('show');
     }
     else if (contador == 8){
-      $("#camara").tooltip('hide');
-      $("#galeria").tooltip('show');
+    $("#camara").tooltip('hide');
+    $("#galeria").tooltip('show');
     }
     else if (contador == 9){
-      $("#galeria").tooltip('hide');
-      $("#datetimepicker").tooltip('show');
-    }
+    $("#galeria").tooltip('hide');
+    $("#datetimepicker").tooltip('show');
+    }    
     else if (contador == 10){
-      $("#action-next").attr("href","personalizar_columna.html");
+    $("#action-next").attr("href","personalizar_columna.html");
     }
   });
-</script>
+  </script>
+    
 
-
-</script>
-
-<!-- Responsive Layout -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+  </script>
+  
+  <!-- Responsive Layout -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
 </head>
 
 <body>
-  <script type="text/javascript" src="header1.js"></script>
-  <a class="brand"  >
-   <i class="icon-chevron-left icon-white"></i>
- </a>
- <a class="brand" style="padding: 0px;">
-  <img id="logo" src="images/imported/LOGOOO.png"/>
-</a>
+ 
+  <div id="phoneBorder">
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <a href="columna.html" class="brand"  >
+         <i class="icon-chevron-left icon-white"></i>
+       </a>
+       <a class="brand" href="#" style="padding: 0px;">
+        <img id="logo" src="images/imported/LOGOOO.png"/>
+      </a>
 <!--       <span style="padding-left: 10px;color:white;font-size:large;line-height:38px;">Columnas</span> -->
 <ul class="nav" style="float: right;">
   <li><a id="columna" data-original-title="Agrega y modifica las columnas que aparecen en tu perfil">
@@ -121,17 +125,20 @@
      <form class="form-search" style="float:right; padding-right:10px; padding-top:5px; margin-bottom:5px">
       <input id="searchbar" placeholder="Buscar" type="text" class="input-medium search-query" style="width:260px" data-provide="typeahead"/>
       <button type="submit" class="btn btn-warning" style="padding:7px"><i class="icon-search icon-white" ></i></button>
+      
     </form>
-    <div style="margin-bottom:5px"> 
+    <div style="margin:5px; height: 32px;"> 
       <ul class="pager">
         <li style="float:left; padding-left: 10px">
-          <a style="color: rgb(25, 29, 31)">&larr;</a>
+          <a href="altamira.html" style="color: rgb(25, 29, 31)">&larr;</a>
         </li>
-        <li>
-          <p style="height:30px; width: 270px; "> <b>Timeline</b></p>
-        </li>
+        <center>
+          <li>
+            <div style="width:20%; padding:0px; margin-bottom:-20px"> <b>Timeline</b> </div>
+          </li>
+        </center>
         <li style="float:right; padding-right: 10px">
-          <a style="color: rgb(25, 29, 31)" >&rarr;</a>
+          <a href="altamira.html" style="color: rgb(25, 29, 31)" >&rarr;</a>
         </li>
       </ul>
     </div>
@@ -141,7 +148,7 @@
       <table class ="table table-bordered" style="margin: 0px; background: #dddddd;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;">
         <tr>
           <td rowspan="2" style="  width: 40px; height: 40px; padding: 0px">
-            <a>
+            <a href="perfil.html">
               <img id="logo" src="images/imported/LOGOOO.png"/>
             </a>
           </td>
@@ -151,16 +158,16 @@
             <!--               Aqui van los botones -->
             <center>
               <div class="btn-group">
-                <button disabled class="btn btn-info" style="padding: 2px">
+                <button class="btn" style="padding: 2px">
                   <i class="icon-share-alt"></i>
                 </button>
-                <button disabled class="btn btn-info" style="padding: 2px">
+                <button class="btn" style="padding: 2px">
                   <i class="icon-retweet"></i>
                 </button>
-                <button disabled class="btn btn-info" style="padding: 2px">
+                <button class="btn" style="padding: 2px">
                   <i class="icon-star"></i>
                 </button>
-                <button disabled class="btn btn-info" style="padding: 2px">
+                <button class="btn" style="padding: 2px">
                   <i class="icon-share"></i>
                 </button>
               </div>
@@ -176,7 +183,7 @@
         <table class ="table table-bordered" style="padding: 0px;margin: 0px; background: #dddddd;padding-top: 5px;padding-left: 5px;padding-bottom: 5px;">
           <tr>
             <td rowspan="2" style="  width: 40px; height: 40px; padding: 0px">
-              <a>
+              <a href="perfil.html">
                 <img id="logo" src="images/imported/LOGOOO.png"/>
               </a>
             </td>
@@ -186,16 +193,16 @@
               <!--               Aqui van los botones -->
               <center>
                 <div class="btn-group">
-                  <button disabled class="btn btn-info" style="padding: 2px">
+                  <button class="btn" style="padding: 2px">
                     <i class="icon-share-alt"></i>
                   </button>
-                  <button disabled class="btn btn-info" style="padding: 2px">
+                  <button class="btn" style="padding: 2px">
                     <i class="icon-retweet"></i>
                   </button>
-                  <button disabled class="btn btn-info" style="padding: 2px">
+                  <button class="btn" style="padding: 2px">
                     <i class="icon-star"></i>
                   </button>
-                  <button disabled disabled class="btn btn-info" style="padding: 2px">
+                  <button class="btn" style="padding: 2px">
                     <i class="icon-share"></i>
                   </button>
                 </div>
@@ -206,29 +213,27 @@
             Este es el segundo #tweet de ejemplo de la vista de #Columnas del tour de ayuda de la aplicacion #TweetCaracas.
           </td>
         </table>
-        <!-- FINAL Tweets ejemplo -->
-
-        <!-- Modals Componer Tweet-->
+        <!-- Modal componer tweet     -->
         <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
           <div class="modal-header">
-            <button disabled type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
             <h3>Componer tweet</h3>
           </div>
           <div class="modal-body">
             <div class="row-fluid">
               <label> Contenido</label>
-              <p><textarea disabled class="span12" rows="3" style="resize: none;"></textarea></p>      
+              <p><textarea class="span12" rows="3" style="resize: none;"></textarea></p>      
             </div>
             <center>
               <div class="btn-group" >
-                <button disabled class="btn" id="camara" data-original-title="Agrega una foto directamente desde tu camara">
+                <button class="btn" id="camara" data-original-title="Agrega una foto directamente desde tu camara">
                   <img id="icon" src="img/camera.png"/>
                 </button>
-                <button disabled class="btn" style="padding-top: 0px; padding-bottom: 0px" id="galeria" data-original-title="Agrega una foto de tu galeria">
+                <button class="btn" style="padding-top: 0px; padding-bottom: 0px" id="galeria" data-original-title="Agrega una foto de tu galeria">
                   <img src="img/gallery.png" style="height: 33px; width: 35px"/>
                 </button>
                 <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px" data-original-title="Escoge cuando se enviara un tweet">
-                  <button disabled class="btn add-on" style="height: 35px; min-width: 50px;">
+                  <button class="btn add-on" style="height: 35px; min-width: 50px;">
                     <img id="icon" src="img/clock.png"/>
                   </button>
                 </div>
@@ -236,27 +241,81 @@
             </center>
           </div>
           <div class="modal-footer">
-            <button disabled type="button" data-dismiss="modal" class="btn">Cerrar</button>
-            <button disabled type="button" class="btn btn-warning">Enviar</button>
+            <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
+            <button type="button" class="btn btn-warning">Enviar</button>
           </div>
         </div>
 
-        <!-- Modal ComponerDM no habilitado en Tutorial -->
-
-        <a id="action-next" >
-          <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px; padding-bottom:15px; position: absolute; left: 200px; top: 450px;"
-          data-original-title="Toca la flecha para avanzar por el tutorial">
-          &rarr;
-        </button>
+        <!--     Modal componer DM-->
+        <div id="dm" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h3>Componer DM</h3>
+          </div>
+          <div class="modal-body">
+            <div class="row-fluid">
+              <label>Usuario</label>
+              <p><input type="text" class="span12" placeholder="@Usuario"></input></p>
+              <label> Contenido</label>
+              <p><textarea class="span12" rows="2" style="resize: none;"></textarea></p>      
+            </div>
+            <center>
+              <div class="btn-group">
+                <button class="btn">
+                  <img id="icon" src="img/camera.png"/>
+                </button>
+                <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
+                  <img src="img/gallery.png" style="height: 33px; width: 35px"/>
+                </button>
+<!--            <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
+              <button class="btn add-on" style="height: 35px; min-width: 50px;">
+                <img id="icon" src="img/clock.png"/>
+              </button>
+            </div>-->
+          </div>
+        </center>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
+        <button type="button" class="btn btn-warning">Enviar</button>
+      </div>
+    </div>     
+  </div>
+      <a id="action-next" >
+	<button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 5px;position: absolute; left: 180px; top: 450px;"
+		data-original-title="Toca la flecha para avanzar por el tutorial">
+	  &rarr;
+	</button>
       </a>
-      <a href="../login.html" >
-        <button id="next" type="button" class="btn btn-warning" style="font-size: 50px; padding: 10px; padding-bottom:10px; padding-top: 10px;position: absolute; left: 330px; top: 450px;;font-size:x-large;"
-        data-original-title="Toca Salir para volver a la pantalla de inicio">
-        Salir
-      </button>
-    </a>
+      <a href="../login.html">
+	<button id="salir" type="button" class="btn btn-warning" style="font-size: 20px; padding-top: 5px; position: absolute; left: 110px; top: 450px"
+		data-original-title="Toca para salir del tutorial">
+	  Salir
+	</button>
+      </a>
+  <script type="text/javascript">
+  $('#datetimepicker').datetimepicker({
+    format: 'dd/MM/yyyy hh:mm:ss',
+    language: 'pt-BR'
+  });
+  </script>
+  
+  <script>
+  var mySource = [{ id: 1, name: 'Lorem Ipsum'},
+  { id: 2, name: '@loremipsum'},
+  { id: 3, name: 'Lorem Altamira'}, 
+  { id: 4, name: '@loremaltamira'}, 
+  { id: 5, name: 'Altamira Ipsum'},
+  { id: 6, name: '@altamiraipsum'},
+  { id: 7, name: '#SOSUniVE'},
+  { id: 8, name: '#CI4325'},
+  { id: 9, name: '#proyectointerfaces'}];
 
-    <!-- Scripts no habilitados en Tutorial -->
-  </body>
-  </html>
+  $('#searchbar').typeahead({
+    source: mySource
+  });
+  </script>
+  
+</body>
+</html>
 
