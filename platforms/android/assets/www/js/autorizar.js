@@ -2,7 +2,6 @@
 var json_usuario = {};
   
 $(document).ready(function(){
-  $("#URL").click(function(){
   var data_file = "http://10.0.1.87:8000/lista_usuarios/";
   var http_request = new XMLHttpRequest();
         
@@ -11,16 +10,16 @@ $(document).ready(function(){
       var result = JSON.parse(http_request.responseText);
       json_usuario = result;
       var items = [];
-      items.push(result['url'])
+      items.push("<a href="+ result['url'] +"> link </a>")
+              
       $("<ul/>", {
         html: items.join("")
         }).appendTo("#link")
     }
   }
 
-  http_request.open("POST", data_file, false);
+  http_request.open("POST", data_file, true);
   http_request.send();
-  });
 });
 
 $(document).ready(function(){
@@ -30,10 +29,9 @@ $(document).ready(function(){
     
   var data_file = "http://10.0.1.87:8000/lista_usuarios/ot="+json_usuario['oauth_token']+"/os="+json_usuario['oauth_token_secret']+"/";
   var http_request = new XMLHttpRequest();
-  json_usuario['pin'] = objeto_serializado[3]['value'];
-  data_file = data_file + "p="+json_usuario['pin']+"/";
+  data_file = data_file + "p="+objeto_serializado[3]['value']+"/"
   
-  http_request.open("POST", data_file, false);
+  http_request.open("POST", data_file, true);
   http_request.send();
   });
 });
