@@ -6,6 +6,7 @@
   <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"> </script>
   <script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"> </script>
   <script type="text/javascript" src="js/base64.js"> </script>
+<!--   <script type="text/javascript" src="js/cargar_mascaras_usuarios.js"> </script> -->
   
   <link rel="stylesheet" href="css/prueba.css" type="text/css" />
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
@@ -21,7 +22,7 @@
   }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+<!--   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/> -->
 
 </head>
 
@@ -68,11 +69,12 @@
                     </a>
                   </button>
                 </li>
-                <li class="columns"><button class="btn-regular" style="padding-left: 8px; padding-right: 8px; margin-bottom: 15px; margin-top: 15px;">
-                  <a href="usuarios.html" id="reg">
+                <li class="columns">
+                  <button class="btn-regular" style="padding-left: 8px; padding-right: 8px; margin-bottom: 15px; margin-top: 15px;">
+                    <a href="usuarios.html" id="reg">
                     <img id="icon" src="img/user.png"/>
                     <br>Usuarios</br>
-                  </a>
+                    </a>
                   </button>
                 </li>
               </ul>
@@ -100,6 +102,12 @@
     </li>
   </ul>
 </div>	      
+
+<!--<script>
+  function setInput(){
+    document.getElementById("tipo_mascara").setAttribute('value','usuario');
+  }
+</script>-->
 
 <script>
   $(document).ready(function(){
@@ -131,24 +139,24 @@
     <center>
       <ul class="columns">
         <li class="columns">
-         <button class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px;">
-           <a href="personalizar_mascara.html" id="reg">
+         <button id="hashtag" class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px;">
+           <a href="mascara_hashtags.html" id="reg">
              <img id="icon" src="img/hash.svg"/>
              <br>Hashtag</br>
            </a>
          </button>
        </li>
        <li class="columns">
-         <button class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px;">
-           <a href="personalizar_mascara.html" id="reg">
+         <button id="listas" class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px;">
+           <a href="mascara_listas.html" id="reg">
              <img id="icon" src="img/list_bullets.png"/>
              <br>Listas</br>
            </a>
          </button>
        </li>
        <li class="columns">
-         <button class="btn-regular" style="padding-left: 8px; padding-right: 8px;">
-           <a href="personalizar_mascara.html" id="reg">
+         <button id="usuarios" class="btn-regular" style="padding-left: 8px; padding-right: 8px;">
+           <a href="mascara_usuarios.html" id="reg">
              <img id="icon" src="img/user.png"/>
              <br>Usuarios</br>
            </a>

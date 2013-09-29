@@ -5,7 +5,9 @@
   <script type="text/javascript" src="js/bootstrap.js"></script>    
   <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"> </script>
   <script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"> </script>
-
+  <script type="text/javascript" src="js/base64.js"> </script>
+  <script type="text/javascript" src="js/cargar_mascaras_usuarios.js"> </script>
+  
   <link rel="stylesheet" href="css/prueba.css" type="text/css" />
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
   <link rel="stylesheet" href="css/bootstrap-modal.css" type="text/css"/>
@@ -21,7 +23,7 @@
   </style>
   <!-- Responsive Layout -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+<!--   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/> -->
 </head>
 
 <body>
@@ -45,92 +47,19 @@
     </div>
   </div>
 
-  <div id="mask" class="hero-unit" style="background: #A9BCF5">
-   <table>
-    <td style="width:40px;" valign="top"> 
-      <a class="brand" href="perfil.html" style="padding: 0px;">
-        <a href="perfil.html">
-          <img id="logo" src="images/imported/LOGOOO.png"/>
-        </a>
-      </a>
-    </td>
-    <td> 
-      <table>
-        <tr>
-          <h5><b>@loremipsum</b></h5>
-        </tr>
-        <tr>
-          <p>Lorem Ipsum</p>
-        </tr>
-      </table>
-    </td>
-  </table>
-</div>
-
-<div id="mask" class="hero-unit" style="background: #FA5882">
-	<table>
-    <td style="width:40px;" valign="top"> 
-      <a class="brand" href="perfil.html" style="padding: 0px;">
-        <img id="logo" src="images/imported/LOGOOO.png"/>
-      </a>
-    </td>
-    <td> 
-      <table>
-        <tr>
-          <h5><b>@loremipsum</b></h5>
-        </tr>
-        <tr>
-          <p>Lorem Ipsum</p>
-        </tr>
-      </table>
-    </td>
-  </table>
-</div>
-
-<div id="mask" class="hero-unit" style="background: #F3F781">
-	<table>
-    <td style="width:40px;" valign="top"> 
-      <a class="brand" href="perfil.html" style="padding: 0px;">
-        <img id="logo" src="images/imported/LOGOOO.png"/>       
-      </a>
-    </td>
-    <td> 
-      <table>
-        <tr>
-          <h5><b>@loremipsum</b></h5>
-        </tr>
-        <tr>
-          <p>Lorem Ipsum</p>
-        </tr>
-      </table>
-    </td>
-  </table>
-</div>
-
-<div id="mask" class="hero-unit" style="background: #81F781">
-  <table>
-    <tr>
-      <h5 style="padding-left: 43px">Lista 3</h5>
-    </tr>
-  </table>
-</div>
-
-<div id="mask" class="hero-unit" style="background: #FAAC58">
-  <table>
-    <tr>
-      <h5 style="padding-left: 43px">#C14325</h5>
-    </tr>
-  </table>
-</div>
+  <div id="mascaras_usuarios"> </div>
 
 <div class ="newMask">
   <center>
-    <button class="btn btn-info" type="button">
+  <form>
+    <input type="hidden" id="tipo_mascara" value=""/>
+    <button type="submit" class="btn btn-info" type="button">
       <i class="icon-plus icon-white"></i>
       <a href="nueva_mascara.html" style="color: white; text-decoration: none">
         Nueva Mascara
       </a>
     </button>
+    </form>
   </center>
 </div>    
 

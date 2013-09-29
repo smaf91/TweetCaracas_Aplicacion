@@ -27,7 +27,7 @@ $(document).ready(function(){
     }
       }
    }
-   http_request.open("GET", data_file, true);
-   http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
-   http_request.send();
+  http_request.open("GET", data_file, true);
+  http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
+  http_request.send();
 });
