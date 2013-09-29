@@ -6,6 +6,7 @@
   <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"> </script>
   <script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"> </script>
   <script type="text/javascript" src="js/bootstrap-typeahead.js"> </script>
+  <script type="text/javascript" src="js/nueva_mascara.js"></script>
   <script type="text/javascript" src="js/farbtastic.js"></script>
   
   <link rel="stylesheet" href="css/farbtastic.css" type="text/css" />
@@ -23,31 +24,10 @@
     background-size: 342px 473px;
   }
   </style>
-  <script type="text/javascript" charset="utf-8">
-  $(document).ready(function() {
-    $('#demo').hide();
-    $('#picker').farbtastic('#color');
-  });
-  </script>
-
-  <!-- Script para seleccionar el valor del input -->
-  <script>
-  $(document).ready(function () {
-    $('#color').val('');
-  });
-  </script>
-
-  <!-- Obtener el valor del color -->
-  <script>
-  $(document).on("click","#botonlindo",function () {
-    var x = $(this).css('backgroundColor');
-    <!-- alert(x); -->
-  });
-  </script>
 
   <!-- Responsive Layout -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
 
 </head>
 
@@ -72,14 +52,14 @@
     </div>
   </div>
   <h4 style="padding-left:15px">Nueva Mascara</h4>
-  <form action="" class="bordeGris">      
+  <form action="" method="post" class="bordeGris" id="insertar">
     <table style="margint:50px">
      <tr>
-       <input id="searchbar" type="text" class="span12 navbar-form" style="width:200px" data-provide="typeahead"/>
+       <input name="campo" id="searchbar" type="text" class="span12 navbar-form" style="width:200px" data-provide="typeahead"/>
      </tr>
      <tr>
        <div class="form-item">
-         <input style="width:200px" class="uneditable-input" type="text" id="color" name="color" value="#123456" />
+       <input style="width:200px" type="text" id="color" name="color" value="#123456" />
        </div>
      </tr>
      <tr>
@@ -87,11 +67,7 @@
        </div>	    
      </tr>
      <tr>
-       <button id="botonlindo" style="margin-top:20px; margin-left:15%" type="submit" class="btn btn-warning" data-loading-text="Enviando...">
-         <a href="personalizar_mascara.html" style="color: white; text-decoration: none">
-          Crear Mascara
-        </a>
-      </button>
+       <input id="botonlindo" style="margin-top:20px; margin-left:15%" type="submit" value="Crear Mascara" class="btn btn-warning"/>
     </tr>
   </table>
 </form>
