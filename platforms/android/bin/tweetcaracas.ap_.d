@@ -158,8 +158,6 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/jquery-2.0.2.min.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_listas_activas.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap-datetimepicker.pt-BR.js \
-/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/nueva_mascara.js \
-/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_mascaras_usuarios.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/autorizar.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap-datetimepicker.min.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_agregar_listas.js \
