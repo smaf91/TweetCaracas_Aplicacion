@@ -15,7 +15,7 @@ function cargar_tweets(columna){
 
 	    // result variable now contains the data structure and can
 	    // be accessed as result.name and result.country.
-
+	   
 	    for (var i = 0, len=result.length; i<len; i++) {
 		var items = ''
 		var color = ""
