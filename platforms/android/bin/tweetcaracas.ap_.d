@@ -4,8 +4,10 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-xhdpi/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/layout/main.xml \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/xml/config.xml \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable/icon96.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-hdpi/ic_launcher.png \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-hdpi/icon72.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-hdpi/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-mdpi/ic_launcher.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-mdpi/icon48.png \
@@ -17,8 +19,10 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-xhdpi/icon96.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-xhdpi/ic_launcher.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-xhdpi/icon.png \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable/icon96.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-hdpi/ic_launcher.png \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-hdpi/icon72.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-hdpi/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-mdpi/ic_launcher.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-mdpi/icon48.png \
@@ -151,6 +155,7 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/jquery-2.0.2.min.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_listas_activas.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap-datetimepicker.pt-BR.js \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/autorizar.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap-datetimepicker.min.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_agregar_listas.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/index.js \
@@ -184,6 +189,7 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/css/smoothness/images/ui-icons_888888_256x240.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/images/imported \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/images/ajax-loader.gif \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/images/imported/LOGOOO.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/images/imported/LOGOOO_nap10.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/images/imported/wheel.png \

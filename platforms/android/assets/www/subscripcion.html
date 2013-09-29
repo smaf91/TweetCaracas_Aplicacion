@@ -8,14 +8,15 @@
   
   <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-
+  <script type="text/javascript" src="js/autorizar.js"></script>
+  
   <style>
   body{
     background-image:url('images/imported/caracas-parque-nacional-el-avila-1280x800.jpg');
   }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+<!--   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/> -->
 </head>
 
 <body>
@@ -23,30 +24,34 @@
     <center>
       <img id="initAppLogo" src="images/imported/LOGOOO_nap10.png"/>
       <h6 style="background-color:rgba(100,100,100,0.2); margin:10px; color:white; padding:5px; border-radius: 10px;">
-        Para poder crear una cuenta, por favor ingrese en este 
-        <a href="#"> link </a>, copie el PIN indicado y posteriormente rellene los campos solicitados. </h6>
-      <form class="form-horizontal">
+        Para poder crear una cuenta, por favor ingrese en el siguente link:
+        copie el PIN indicado y posteriormente rellene los campos solicitados.<br>
+        <button id="URL" class="btn btn-success">Autorizar</button>
+        <div id="link"></div>
+        <div>
+      </h6>
+      <form class="form-horizontal" id = "insertar">
         <div class="control-group">
           <div class="controls" style="margin: 0px">
-            <input type="text" id="inputEmail" placeholder="Usuario">
+            <input type="text" id="inputEmail" name="username" placeholder="Usuario">
           </div>
         </div>
         <div class="control-group">
           <div class="controls" style="margin: 0px">
-            <input type="password" id="inputPassword" placeholder="Contrasena">
+            <input type="password" name="password" id="inputPassword" placeholder="Contrasena">
           </div>
         </div>
         <div class="control-group success">
           <div class="controls" style="margin: 0px">
-            <input type="password" id="inputPassword" placeholder="Confirmar Contrasena">
+            <input type="password" name = "confirm" id="inputPassword" placeholder="Confirmar Contrasena">
           </div>
         </div>
         <div class="control-group">
           <div class="controls" style="margin: 0px">
-            <input type="text" placeholder="PIN">
+            <input type="text" name= "pin" placeholder="PIN">
           </div>
         </div>
-        <button type="submit" class="btn btn-info">
+        <button id = "subscribir" type="submit" class="btn btn-info">
           <a href="login.html" style="color: white; text-decoration: none">
             Crear Cuenta
           </a>
@@ -54,5 +59,6 @@
       </form>
     </center>
   </div>
+  
 </body>
 </html>
