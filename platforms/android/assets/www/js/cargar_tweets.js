@@ -8,11 +8,7 @@ $(document).ready(function(){
     
     http_request.onreadystatechange  = function(){
 	if (http_request.readyState == 4  )
-	{
-	    var titulo = "<p style='text-align:center; padding-bottom:5px'> <b> Timeline </b> </p>";
-
-	    $(titulo).appendTo("#titulo_columna");
-	    
+	{	    
 
 	    // Javascript function JSON.parse to parse JSON data
 	    
