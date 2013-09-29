@@ -9,6 +9,11 @@ $(document).ready(function(){
     http_request.onreadystatechange  = function(){
 	if (http_request.readyState == 4  )
 	{
+	    var titulo = "<p style='text-align:center; padding-bottom:5px'> <b> Timeline </b> </p>";
+
+	    $(titulo).appendTo("#titulo_columna");
+	    
+
 	    // Javascript function JSON.parse to parse JSON data
 	    
 	    // alert(http_request.responseText);
@@ -16,7 +21,7 @@ $(document).ready(function(){
 
 	    // result variable now contains the data structure and can
 	    // be accessed as result.name and result.country.
-	    
+	   
 	    for (var i = 0, len=result.length; i<len; i++) {
 		var items = []
 		var color = ""
@@ -55,12 +60,17 @@ $(document).ready(function(){
 		items.push("<td colspan='3' style='padding: 0px; border-color: "+result[i]['color']+";'>");
 		items.push(" " + result[i]['text'] + " ");
 		items.push("</td> </table> </div>");
-		
 		$( "<ul/>", {
 		    "class":"my-new-list",
-		    "style": "margin: 0px 0px 0px 0px",
+		    "style": "margin: 0px 0px 0px -20px",
 		    html: items.join("")
 		}).appendTo("#tweets");
+		
+
+
+		// Formato al slider
+		$(".bx-viewport").css("height","auto");
+
 	    }
 	}
     }
@@ -69,6 +79,6 @@ $(document).ready(function(){
     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
 //     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("smaf91" + ':' + "12345"));
     http_request.send();
-
+    
 });
 
