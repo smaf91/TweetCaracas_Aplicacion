@@ -4,8 +4,10 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-xhdpi/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/layout/main.xml \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/xml/config.xml \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable/icon96.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-hdpi/ic_launcher.png \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-hdpi/icon72.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-hdpi/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-mdpi/ic_launcher.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/res/drawable-mdpi/icon48.png \
