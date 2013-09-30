@@ -36,6 +36,9 @@
             alert("Nombre o password incorrecto. Intentelo de nuevo.");
           } else {
               $("#insertar").attr('action',"columna.html");
+//               $("#usuario_autenticado").attr('value',username);
+              localStorage['usuario_autenticado'] = username;
+              localStorage['columna'] = "timeline";
           }
         }  
       };
@@ -62,9 +65,7 @@
           </div>
         </div>
         <input id="login" type="submit" class="btn btn-info" value="Iniciar Sesion"/>
-<!--           <a href="columna.html" style="color: white; text-decoration: none"> -->
-<!--             Iniciar sesion -->
-<!--           </a> -->
+        <input type="hidden" name="usuario_autenticado" id="usuario_autenticado" value=""/>
       </form>
     <button type="submit" class="btn btn-success">
       <a href="subscripcion.html" style="color: white; text-decoration: none">

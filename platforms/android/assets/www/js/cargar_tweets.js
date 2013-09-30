@@ -1,11 +1,13 @@
 $(document).ready(function(){
 
+    var usuario = localStorage['usuario_autenticado'];
+    var columna = localStorage['columna'];
+    alert(columna);
     //   Cambiar el URL segun la IP en donde este corriendo el servidor.
-    var data_file = "http://0.0.0.0:8000/offi91/columnas/timeline/"
+    var data_file = "http://0.0.0.0:8000/"+usuario+"/columnas/"+columna+"/"
     //   var data_file = "http://127.0.0.1:8000/Offi91/columnas/timeline/"
     var http_request = new XMLHttpRequest();
    
-    
     http_request.onreadystatechange  = function(){
 	if (http_request.readyState == 4  )
 	{

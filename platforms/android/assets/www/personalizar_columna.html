@@ -27,6 +27,27 @@
 </head>
 
 <body>
+
+<!--<script>
+  $(document).ready(function(){
+    alert(localStorage['usuario_autenticado']);
+  });
+</script>-->
+
+<script>
+  function ejecutarFav(){
+    localStorage['columna'] = "favoritos";
+    window.location.href = "columna.html";
+  }
+</script>
+
+<script>
+  function ejecutarAct(){
+    localStorage['columna'] = "actividad";
+    window.location.href = "columna.html";
+  }
+</script>
+
   <div id="phoneBorder">
     <div class="navbar navbar-inverse">
       <div class="navbar-inner">
@@ -81,14 +102,14 @@
 
        <ul class="columns">
         <li class="columns">
-          <button id="favoritos" class="btn-regular" style="padding-left: 7px; padding-right: 7px;">
+          <button id="favoritos" onClick="ejecutarFav()" class="btn-regular" style="padding-left: 7px; padding-right: 7px;">
             <a href="columna.html" id="reg"><img id="icon" src="img/star_fav.png"/>
               <br>Favoritos</br>
             </a>
           </button>
         </li>
       <li class="columns">
-        <button id="actividad" class="btn-regular" style="padding: 7px; padding-top: 1px; padding-bottom: 0px">
+        <button id="actividad" onClick="ejecutarAct()" class="btn-regular" style="padding: 7px; padding-top: 1px; padding-bottom: 0px">
           <a href="columna.html" id="reg"><img src="img/activity.png" style="height: 35px; width: 35px"/>
             <br>Actividad</br>
           </a>
@@ -106,7 +127,8 @@
 <script>
   $(document).ready(function(){
     $("#favoritos").click(function() {
-      var data_file = "http://0.0.0.0:8000/offi91/conjunto_columnas/favoritos/tipo=default/";
+      var usuario = localStorage['usuario_autenticado'];
+      var data_file = "http://0.0.0.0:8000/"+usuario+"/conjunto_columnas/favoritos/tipo=default/";
       var http_request = new XMLHttpRequest();
       http_request.open("POST", data_file, false);
       http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
@@ -118,7 +140,8 @@
 <script>
   $(document).ready(function(){
     $("#actividad").click(function() {
-      var data_file = "http://0.0.0.0:8000/offi91/conjunto_columnas/actividad/tipo=default/";
+      var usuario = localStorage['usuario_autenticado'];
+      var data_file = "http://0.0.0.0:8000/"+usuario+"/conjunto_columnas/favoritos/tipo=default/";
       var http_request = new XMLHttpRequest();
       http_request.open("POST", data_file, false);
       http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));

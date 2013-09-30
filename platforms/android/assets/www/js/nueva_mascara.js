@@ -1,6 +1,7 @@
 
   $(document).ready(function(){
     $("#insertar").submit(function(){
+      var usuario = localStorage['usuario_autenticado'];
       var x = $("#color").css('backgroundColor');
       $("#color").attr('value',x);
       $("#color").css({'text-color':x});
@@ -11,13 +12,21 @@
       
       if (primer_caracter[0] == "@") {
         tipo = "usuario";
+        $("#insertar").attr('action',"personalizar_columna.html");
       } else if (primer_caracter[0] == "#") {
         tipo = "hashtag";
       } else {
         tipo = "lista";
       }
       
-      var data_file = "http://0.0.0.0:8000/offi91/mascaras/";
+//       http_request.onreadystatechange = function (oEvent) {  
+//         if (http_request.readyState === 4) {  
+//               $("#insertar").attr('action',"personalizar_columna.html");
+//         }  
+//       };
+      
+      
+      var data_file = "http://0.0.0.0:8000/"+usuario+"/mascaras/";
       data_file = data_file + "t=" + tipo + "/v=" + campo + "/c=" + x + "/";
       var request = new XMLHttpRequest();
       request.open("POST", data_file, false);
@@ -33,3 +42,4 @@
     $('#demo').hide();
     $('#picker').farbtastic('#color');
   });
+  
