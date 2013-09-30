@@ -1,7 +1,7 @@
 $(document).ready(function(){
+    
+    cargar_tweets("timeline");
 
-    //   Cambiar el URL segun la IP en donde este corriendo el servidor.
-    // var data_file = "http://10.0.1.87:8000/offi91/conjunto_columnas/"
     var data_file = "http://127.0.0.1:8000/offi91/conjunto_columnas/"
     var http_request = new XMLHttpRequest();
     
@@ -13,7 +13,7 @@ $(document).ready(function(){
 	    
 	    // alert(http_request.responseText);
 	    
-	    columnas = JSON.parse(http_request.responseText);
+	    var columnas = JSON.parse(http_request.responseText);
 	    
 	// result variable now contains the data structure and can
 	// be accessed as result.name and result.country.
@@ -39,6 +39,7 @@ $(document).ready(function(){
 
 		items = items + '</li>\n';
 		$(items).appendTo("#col");
+		cargar_tweets(columnas[i]);
 	    }
 	}
 	
