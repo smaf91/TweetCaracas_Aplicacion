@@ -19,25 +19,52 @@
 </head>
 
 <body>
+
+<script>
+  $(document).ready(function(){
+    $("#login").click(function(){
+      var data_file = "http://0.0.0.0:8000/usuarios/n=";
+      var http_request = new XMLHttpRequest();
+      var form = $("#insertar").serializeArray()
+      username = form[0]['value'];
+      password = form[1]['value'];
+      data_file = data_file + username + "/p=" + password + "/";
+
+      http_request.onreadystatechange = function (oEvent) {  
+        if (http_request.readyState === 4) {  
+          if (http_request.status != 200) {  
+            alert("Nombre o password incorrecto. Intentelo de nuevo.");
+          } else {
+              $("#insertar").attr('action',"columna.html");
+          }
+        }  
+      };
+
+      http_request.open("GET", data_file, false);
+      http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(username + ':' + password));
+      http_request.send();
+    });
+  });
+</script>
+
   <div id="phoneBorder">
     <center>
       <img id="initAppLogo" src="images/imported/LOGOOO_nap10.png"/>
-      <form class="form-horizontal">
+      <form action="" class="form-horizontal" id="insertar">
         <div class="control-group">
           <div class="controls" style="margin: 0px">
-            <input type="text" id="inputEmail" placeholder="Usuario">
+            <input name="username" type="text" id="inputEmail" placeholder="Usuario">
           </div>
         </div>
         <div class="control-group">
           <div class="controls" style="margin: 0px">
-            <input type="password" id="inputPassword" placeholder="Contrasena">
+            <input onClick = "columna()" name="password" type="password" id="inputPassword" placeholder="Contrasena">
           </div>
         </div>
-        <button type="submit" class="btn btn-info">
-          <a href="columna.html" style="color: white; text-decoration: none">
-            Iniciar sesion
-          </a>
-        </button>
+        <input id="login" type="submit" class="btn btn-info" value="Iniciar Sesion"/>
+<!--           <a href="columna.html" style="color: white; text-decoration: none"> -->
+<!--             Iniciar sesion -->
+<!--           </a> -->
       </form>
     <button type="submit" class="btn btn-success">
       <a href="subscripcion.html" style="color: white; text-decoration: none">
