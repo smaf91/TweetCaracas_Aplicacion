@@ -32,7 +32,7 @@ $(document).ready(function(){
 		items.push("<td style='padding: 0px; border: "+ result[i]['color'] +";'><b>" + result[i]['name'] + "</b>");
 		items.push(" @" + result[i]['screen_name'] + "</td>");
 		items.push("<td style='border-color:"+result[i]['color']+";'>");
-		items.push("<p style='text-align: right; margin-bottom: 0px; padding: 0px'>7pm</p></td>");
+		items.push("<p style='text-align: right; margin-bottom: 0px; padding: 0px'>"+result[i]['created_at']+"</p></td>");
 		items.push("<td style='padding: 3px; border-color:" + result[i]['color'] + " ;'>");
 		items.push("<center>");
 		items.push("<div class='btn-group'>");
