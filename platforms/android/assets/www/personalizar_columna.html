@@ -128,7 +128,7 @@
   $(document).ready(function(){
     $("#favoritos").click(function() {
       var usuario = localStorage['usuario_autenticado'];
-      var data_file = "http://0.0.0.0:8000/"+usuario+"/conjunto_columnas/favoritos/tipo=default/";
+      var data_file = "http://10.0.1.87:8000/"+usuario+"/conjunto_columnas/favoritos/tipo=default/";
       var http_request = new XMLHttpRequest();
       http_request.open("POST", data_file, false);
       http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
@@ -141,7 +141,7 @@
   $(document).ready(function(){
     $("#actividad").click(function() {
       var usuario = localStorage['usuario_autenticado'];
-      var data_file = "http://0.0.0.0:8000/"+usuario+"/conjunto_columnas/favoritos/tipo=default/";
+      var data_file = "http://10.0.1.87:8000/"+usuario+"/conjunto_columnas/actividad/tipo=default/";
       var http_request = new XMLHttpRequest();
       http_request.open("POST", data_file, false);
       http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));

@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     var usuario = localStorage['usuario_autenticado'];
-    var data_file = "http://0.0.0.0:8000/"+usuario+"/mascaras/t=usuario/";
+    var data_file = "http://10.0.1.87:8000/"+usuario+"/mascaras/t=usuario/";
     var http_request = new XMLHttpRequest();
 
     http_request.onreadystatechange  = function(){

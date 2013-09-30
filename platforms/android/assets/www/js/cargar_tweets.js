@@ -4,7 +4,7 @@ $(document).ready(function(){
     var columna = localStorage['columna'];
     alert(columna);
     //   Cambiar el URL segun la IP en donde este corriendo el servidor.
-    var data_file = "http://0.0.0.0:8000/"+usuario+"/columnas/"+columna+"/"
+    var data_file = "http://10.0.1.87:8000/"+usuario+"/columnas/"+columna+"/"
     //   var data_file = "http://127.0.0.1:8000/Offi91/columnas/timeline/"
     var http_request = new XMLHttpRequest();
    
