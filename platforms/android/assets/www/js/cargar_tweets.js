@@ -6,8 +6,9 @@ function cargar_tweets(columna){
     var data_file = "http://10.0.1.87:8000/"+usuario+"/columnas/"+columna+"/"
     //   var data_file = "http://127.0.0.1:8000/Offi91/columnas/timeline/"
     var http_request = new XMLHttpRequest();
-   
-    http_request.onreadystatechange  = function(){
+
+    http_request.onreadystatechange = function(){
+
 	if (http_request.readyState == 4  )
 	{	    
 
@@ -15,7 +16,7 @@ function cargar_tweets(columna){
 
 	    // result variable now contains the data structure and can
 	    // be accessed as result.name and result.country.
-	   
+
 	    for (var i = 0, len=result.length; i<len; i++) {
 		var items = ''
 		var color = ""
