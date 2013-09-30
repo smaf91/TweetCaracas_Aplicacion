@@ -11,9 +11,7 @@ $(document).ready(function(){
     http_request.onreadystatechange  = function(){
 	if (http_request.readyState == 4  )
 	{	    
-
 	    // Javascript function JSON.parse to parse JSON data
-	    
 	    // alert(http_request.responseText);
 	    var result = JSON.parse(http_request.responseText);
 
