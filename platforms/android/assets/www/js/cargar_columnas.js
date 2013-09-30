@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
     //   Cambiar el URL segun la IP en donde este corriendo el servidor.
-    var data_file = "http://10.0.1.87:8000/offi91/conjunto_columnas/"
-    //   var data_file = "http://127.0.0.1:8000/Offi91/conjunto_columnas/"
+    // var data_file = "http://10.0.1.87:8000/offi91/conjunto_columnas/"
+    var data_file = "http://127.0.0.1:8000/offi91/conjunto_columnas/"
     var http_request = new XMLHttpRequest();
     
     
@@ -13,119 +13,43 @@ $(document).ready(function(){
 	    
 	    // alert(http_request.responseText);
 	    
-	    var result = JSON.parse(http_request.responseText);
+	    columnas = JSON.parse(http_request.responseText);
 	    
 	// result variable now contains the data structure and can
 	// be accessed as result.name and result.country.
 	
-	    for (var i = 0, len=result.length; i<len; i++) {
-		var items = "";
-		var titulo = "<p style='text-align:center; padding-bottom:5px'> <b>"+ result[i] +"</b> </p>";
-	    
-		items = items + "<li>";
-		items = items + "<div id='tweets'>";
-		items = items + "<div id='titulo_columna'>";
+	    for (var i = 0, len=columnas.length; i<len; i++) {
+		var items = '';
+		var titulo = "<p style='text-align:center; padding-bottom:5px'> <b>"+ columnas[i] +"</b> </p>";
+		items = items + '<li>';
+
+		//Titulo
+		items = items + "<div id='titulo_columna'>\n";
 		items = items + titulo;
-		items = items + "</div>";
-		items = items + "</div>";
-		items = items + "<center>";
-		items = items + "<img src='images/ajax-loader.gif'/>";
-		items = items + "</center>";
-		items = items + "</li>";
-
-		$(items).appendTo("#columnas");
-
+		items = items + "</div>\n";
 		
-	    }
-	}
-       
-    }
+		//Div para rellenar los tweets
+ 		items = items + "<div id='"+ columnas[i]  +"'>\n";
+		items = items + "</div>\n";
 
-    cargar_tweets = function(){    
-	
-	//   Cambiar el URL segun la IP en donde este corriendo el servidor.
-	var data_file = "http://10.0.1.87:8000/offi91/columnas/timeline/"
-	//   var data_file = "http://127.0.0.1:8000/Offi91/columnas/timeline/"
-	var http_request = new XMLHttpRequest();
-	
-	
-	http_request.onreadystatechange  = function(){
-	    if (http_request.readyState == 4  )
-	    {	    
+		//Gif de cargando
+		items = items + "<center>\n";
+		items = items + "<img src='images/ajax-loader.gif'/>\n";
+		items = items + "</center>\n";
 
-		// Javascript function JSON.parse to parse JSON data
-		
-		// alert(http_request.responseText);
-		var result = JSON.parse(http_request.responseText);
-
-		// result variable now contains the data structure and can
-		// be accessed as result.name and result.country.
-		
-		for (var i = 0, len=result.length; i<len; i++) {
-		    var items = []
-		    var color = ""
-		    items.push("<div style='margin: 5px; border: 1px solid rgba(107, 104, 104, 0.31); border-radius: 4px'>");
-		    items.push("<table class ='table table-bordered' style='margin: 0px; border: 1px solid "+result[i]['color']+";"); 
-		    items.push("background:"+result[i]['color']+";'>");
-		    items.push("<tr>");
-		    items.push("<td rowspan='2' style='width: 40px; height: 40px; padding: 0px; border: "+result[i]['color']+";'>");
-		    items.push("<a href='perfil.html'>");
-		    items.push("<img style='border-radius: 4px' src='"+result[i]['image']+"'/>");
-		    items.push("</a>");
-		    items.push("</td>");
-		    items.push("<td style='padding: 0px; border: "+ result[i]['color'] +";'><b>" + result[i]['name'] + "</b>");
-		    items.push(" @" + result[i]['screen_name'] + "</td>");
-		    items.push("<td style='border-color:"+result[i]['color']+";'>");
-		    items.push("<p style='text-align: right; margin-bottom: 0px; padding: 0px'>7pm</p></td>");
-		    items.push("<td style='padding: 3px; border-color:" + result[i]['color'] + " ;'>");
-		    items.push("<center>");
-		    items.push("<div class='btn-group'>");
-		    items.push("<button class='btn' style='padding: 2px'>");
-		    items.push("<i class='icon-share-alt'></i>");
-		    items.push("</button>");
-		    items.push("<button class='btn' style='padding: 2px'>");
-		    items.push("<i class='icon-retweet'></i>");
-		    items.push("</button>");
-		    items.push("<button class='btn' style='padding: 2px'>");
-		    items.push("<i class='icon-star'></i>");
-		    items.push("</button>");
-		    items.push("<button class='btn' style='padding: 2px'>");
-		    items.push("<i class='icon-share'></i>");
-		    items.push("</button>");
-		    items.push("</div>");
-		    items.push("</center>");
-		    items.push("</td>");
-		    items.push("</tr>");
-		    items.push("<td colspan='3' style='padding: 0px; border-color: "+result[i]['color']+";'>");
-		    items.push(" " + result[i]['text'] + " ");
-		    items.push("</td> </table> </div>");
-		    $( "<ul/>", {
-			"class":"my-new-list",
-			"style": "margin: 0px 0px 0px -20px",
-			html: items.join("")
-		    }).appendTo("#tweets");
-		    
-
-
-		    // Formato al slider
-		    $(".bx-viewport").css("height","auto");
-
-		}
+		items = items + '</li>\n';
+		$(items).appendTo("#col");
 	    }
 	}
 	
-	http_request.open("GET", data_file, true);
-	http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
-	//     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("smaf91" + ':' + "12345"));
-	http_request.send();
     }
     
-    
-    http_request.open("GET", data_file, true);
+
+    http_request.open("GET", data_file, false);
     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
     //     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("smaf91" + ':' + "12345"));
-    http_request.send();
+    http_request.send();    
+    $('.bxslider').bxSlider();	
     
-    cargar_tweets();
-		  
+
 });
