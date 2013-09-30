@@ -82,14 +82,14 @@
        <ul class="columns">
         <li class="columns">
           <button id="favoritos" class="btn-regular" style="padding-left: 7px; padding-right: 7px;">
-            <a href="#" id="reg"><img id="icon" src="img/star_fav.png"/>
+            <a href="columna.html" id="reg"><img id="icon" src="img/star_fav.png"/>
               <br>Favoritos</br>
             </a>
           </button>
         </li>
       <li class="columns">
         <button id="actividad" class="btn-regular" style="padding: 7px; padding-top: 1px; padding-bottom: 0px">
-          <a href="#" id="reg"><img src="img/activity.png" style="height: 35px; width: 35px"/>
+          <a href="columna.html" id="reg"><img src="img/activity.png" style="height: 35px; width: 35px"/>
             <br>Actividad</br>
           </a>
         </button>
@@ -101,12 +101,12 @@
       </button>
     </li>
   </ul>
-</div>
+</div>	      
 
 <script>
   $(document).ready(function(){
     $("#favoritos").click(function() {
-      var data_file = "http://10.0.1.87:8000/offi91/conjunto_columnas/favoritos/tipo=default/";
+      var data_file = "http://0.0.0.0:8000/offi91/conjunto_columnas/favoritos/tipo=default/";
       var http_request = new XMLHttpRequest();
       http_request.open("POST", data_file, false);
       http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
@@ -118,7 +118,7 @@
 <script>
   $(document).ready(function(){
     $("#actividad").click(function() {
-      var data_file = "http://10.0.1.87:8000/offi91/conjunto_columnas/actividad/tipo=default/";
+      var data_file = "http://0.0.0.0:8000/offi91/conjunto_columnas/actividad/tipo=default/";
       var http_request = new XMLHttpRequest();
       http_request.open("POST", data_file, false);
       http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));

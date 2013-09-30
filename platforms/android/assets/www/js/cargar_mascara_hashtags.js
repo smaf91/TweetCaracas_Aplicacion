@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    var data_file = "http://10.0.1.87:8000/offi91/mascaras/t=hashtag/";
+    var data_file = "http://0.0.0.0:8000/offi91/mascaras/t=hashtag/";
     var http_request = new XMLHttpRequest();
 
     http_request.onreadystatechange  = function(){

@@ -31,8 +31,8 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-ldpi/icon.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/bin/res/drawable-ldpi/icon36.png \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/mascara_usuarios.html \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/res \
-/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/personalizar_mascara.html \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/barra_navegacion.html \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/cordova.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/spec \
@@ -42,6 +42,7 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/Tour_Ayuda \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/cordova_plugins.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/config.xml \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/mascara_hashtags.html \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/usuarios.html \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/img \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/login.html \
@@ -59,6 +60,7 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/columna.html \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/subscripcion.html \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/images \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/mascara_listas.html \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/res/screen \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/res/icon \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/res/screen/tizen \
@@ -150,17 +152,21 @@
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap-typeahead.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_tweets.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/farbtastic.js \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_mascaras_listas.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/base64.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap.min.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/jquery-2.0.2.min.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_listas_activas.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap-datetimepicker.pt-BR.js \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/nueva_mascara.js \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_mascaras_usuarios.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/autorizar.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap-datetimepicker.min.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_agregar_listas.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/index.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/jquery-1.8.2.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/bootstrap.js \
+/home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/js/cargar_mascara_hashtags.js \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/css/bootstrap-responsive.min.css \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/css/farbtastic.css \
 /home/smaf/Documents/USB/proyecto_interfaces/tweetcaracas/platforms/android/assets/www/css/bootstrap.min.css \

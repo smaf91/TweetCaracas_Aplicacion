@@ -1,6 +1,6 @@
 $(document).ready(function(){
 //   Cambiar el URL segun la IP en donde este corriendo el servidor.
-    var data_file = "http://10.0.1.87:8000/offi91/listas/"
+    var data_file = "http://0.0.0.0:8000/offi91/listas/"
     var http_request = new XMLHttpRequest();
 
    http_request.onreadystatechange  = function(){

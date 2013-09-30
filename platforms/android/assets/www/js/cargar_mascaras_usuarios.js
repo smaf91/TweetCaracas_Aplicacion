@@ -1,12 +1,13 @@
 
 $(document).ready(function(){
-    var data_file = "http://10.0.1.87:8000/offi91/mascaras/t=usuario/";
+    var data_file = "http://0.0.0.0:8000/offi91/mascaras/t=usuario/";
     var http_request = new XMLHttpRequest();
 
     http_request.onreadystatechange  = function(){
       if (http_request.readyState == 4  ) {
           var result = JSON.parse(http_request.responseText);
           
+//           alert("entre");
           for (var i = 0, len=result.length; i<len; i++) {
             var items = []
             items.push("<div id='mask' class='hero-unit' style='background: "+result[i]['fields']['color']+"'>");
