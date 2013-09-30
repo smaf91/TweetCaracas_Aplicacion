@@ -1,6 +1,6 @@
 function cargar_tweets(columna){
 
-    var data_file = "http://127.0.0.1:8000/Offi91/columnas/" + columna + "/"
+    var data_file = "http://0.0.0.0:8000/Offi91/columnas/" + columna + "/"
     var http_request = new XMLHttpRequest();
 
     http_request.onreadystatechange = function(){
