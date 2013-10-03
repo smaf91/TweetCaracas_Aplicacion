@@ -27,7 +27,7 @@
 //       };
       
       
-      var data_file = "http://10.0.1.87:8000/"+usuario+"/mascaras/";
+      var data_file = "http://0.0.0.0:8000/"+usuario+"/mascaras/";
       data_file = data_file + "t=" + tipo + "/v=" + campo + "/c=" + x + "/";
       var request = new XMLHttpRequest();
       request.open("POST", data_file, false);
