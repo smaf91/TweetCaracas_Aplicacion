@@ -17,6 +17,7 @@
         tipo = "hashtag";
       } else {
         tipo = "lista";
+        campo = objeto_serializado[0]['value'];
       }
       
 //       http_request.onreadystatechange = function (oEvent) {  
