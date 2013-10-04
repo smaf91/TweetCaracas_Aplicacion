@@ -39,8 +39,8 @@ function cargar_tweets(columna){
 		items = items + "<button class='btn' style='padding: 2px'>";
 		items = items + "<i class='icon-share-alt'></i>";
 		items = items + "</button>";
-		items = items + "<button class='btn' style='padding: 2px'>";
-		items = items + "<i class='icon-retweet'></i>";
+		items = items + "<button class='btn' id='rt' style='padding: 2px'>";
+		items = items + "<i class='icon-retweet'><input type='hidden' name='id' value='"+result[i]['id']+"'/></i>";
 		items = items + "</button>";
 		items = items + "<button class='btn' style='padding: 2px'>";
 		items = items + "<i class='icon-star'></i>";
