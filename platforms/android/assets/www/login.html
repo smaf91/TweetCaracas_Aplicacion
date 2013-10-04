@@ -23,7 +23,7 @@
 <script>
   $(document).ready(function(){
     $("#login").click(function(){
-      var data_file = "http://10.0.1.87:8000/usuarios/n=";
+      var data_file = "http://0.0.0.0:8000/usuarios/n=";
       var http_request = new XMLHttpRequest();
       var form = $("#insertar").serializeArray()
       username = form[0]['value'];
@@ -32,6 +32,7 @@
 
       http_request.onreadystatechange = function (oEvent) {  
         if (http_request.readyState === 4) {  
+          alert(http_request.status);  
           if (http_request.status != 200) {  
             alert("Nombre o password incorrecto. Intentelo de nuevo.");
           } else {
