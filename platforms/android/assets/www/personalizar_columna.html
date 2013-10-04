@@ -8,6 +8,7 @@
   <script type="text/javascript" src="js/base64.js"> </script>
   <script type="text/javascript" src="js/twittear.js"> </script>
   <script type="text/javascript" src="js/enviar_dm.js"> </script>
+  <script type="text/javascript" src="js/revisar_columnas_activas.js"> </script>
   
   <link rel="stylesheet" href="css/prueba.css" type="text/css" />
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
@@ -76,7 +77,7 @@
             <center>
               <ul class="columns" style="margin-bottom: 10px">
                 <li class="columns">
-                  <button class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px; margin: 0px; margin-top: 15px;">
+                  <button class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px; padding-left: 8.5px; padding-right: 8.5px; margin: 0px; margin-top: 15px;">
                    <a href="hashtags.html" id="reg">
                     <img id="icon" src="img/hash.svg"/>
                     <br>Hashtag</br>
@@ -84,7 +85,7 @@
                   </button>
                 </li>
                 <li class="columns">
-                  <button class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px; margin: 0px; margin-top: 15px;">
+                  <button class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px; padding-left: 14.5px; padding-right: 14.5px; margin: 0px; margin-top: 15px;">
                     <a href="listas_activas.html" id="reg">
                       <img id="icon" src="img/list_bullets.png"/>
                       <br>Listas</br>
@@ -92,7 +93,7 @@
                   </button>
                 </li>
                 <li class="columns">
-                  <button class="btn-regular" style="padding-left: 8px; padding-right: 8px; margin: 0px; margin-top: 15px;">
+                  <button class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px; padding-left: 8px; padding-right: 8px; margin: 0px; margin-top: 15px;">
                     <a href="usuarios.html" id="reg">
                     <img id="icon" src="img/user.png"/>
                     <br>Usuarios</br>
@@ -103,20 +104,20 @@
 
        <ul class="columns">
         <li class="columns">
-          <button id="favoritos" onClick="ejecutarFav()" class="btn-regular" style="padding-left: 7px; padding-right: 7px; margin: 0px; margin-top: 15px;">
-            <a href="columna.html" id="reg"><img id="icon" src="img/star_fav.png"/>
+          <button id="BFav" class="btn btn-info" style="padding-bottom: 5.5px; padding-top: 5.5px; padding-left: 7px; padding-right: 7px; margin: 0px; margin-top: 15px;">
+            <a href="#" id="favoritos" style="text-decoration: none; color: black; font-size: 10px;" onClick="document.location.reload(true)"><img id="icon" src="img/star_fav.png"/>
               <br>Favoritos</br>
             </a>
           </button>
         </li>
       <li class="columns">
-        <button id="actividad" onClick="ejecutarAct()" class="btn-regular" style="padding: 7px; padding-top: 1px; padding-bottom: 0px; margin: 0px; margin-top: 15px;">
-          <a href="columna.html" id="reg"><img src="img/activity.png" style="height: 35px; width: 35px"/>
+        <button id="BAct" class="btn btn-info" style="padding: 7px; padding-top: 1px; padding-bottom: 0px; margin: 0px; margin-top: 15px;">
+          <a href="#" style="text-decoration: none; color: black; font-size: 10px;" id="actividad" onClick="document.location.reload(true)"><img src="img/activity.png" style="height: 35px; width: 35px"/>
             <br>Actividad</br>
           </a>
         </button>
       </li>
-      <li class="columns"><button class="btn-regular" style="margin: 0px; margin-top: 15px;">
+      <li class="columns"><button type="button" class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px;padding-left: 5.5px; padding-right: 5.5px; margin: 0px; margin-top: 15px;">
         <a href="localidades.html" id="reg"><img id="icon" src="img/pin_map.png"/>
           <br>Localidad</br>
         </a>
@@ -129,10 +130,10 @@
   $(document).ready(function(){
     $("#favoritos").click(function() {
       var usuario = localStorage['usuario_autenticado'];
-      var data_file = "http://10.0.1.87:8000/"+usuario+"/conjunto_columnas/favoritos/tipo=default/";
+      var data_file = "http://0.0.0.0:8000/"+usuario+"/conjunto_columnas/favoritos/tipo=default/";
       var http_request = new XMLHttpRequest();
       http_request.open("POST", data_file, false);
-      http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
+      http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(localStorage['usuario_autenticado'] + ':' + localStorage['clave']));
       http_request.send();
     });
   });
@@ -142,10 +143,10 @@
   $(document).ready(function(){
     $("#actividad").click(function() {
       var usuario = localStorage['usuario_autenticado'];
-      var data_file = "http://10.0.1.87:8000/"+usuario+"/conjunto_columnas/actividad/tipo=default/";
+      var data_file = "http://0.0.0.0:8000/"+usuario+"/conjunto_columnas/actividad/tipo=default/";
       var http_request = new XMLHttpRequest();
       http_request.open("POST", data_file, false);
-      http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
+      http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(localStorage['usuario_autenticado'] + ':' + localStorage['clave']));
       http_request.send();
     });
   });
@@ -157,7 +158,7 @@
     <center>
       <ul class="columns">
         <li class="columns">
-         <button id="hashtag" class="btn-regular" style="padding-left: 8.5px; padding-right: 8.5px; margin: 0px;">
+         <button id="hashtag" class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px; padding-left: 8.5px; padding-right: 8.5px; margin: 0px;">
            <a href="mascara_hashtags.html" id="reg">
              <img id="icon" src="img/hash.svg"/>
              <br>Hashtag</br>
@@ -165,7 +166,7 @@
          </button>
        </li>
        <li class="columns">
-         <button id="listas" class="btn-regular" style="padding-left: 14.5px; padding-right: 14.5px; margin: 0px;">
+         <button id="listas" class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px; padding-left: 14.5px; padding-right: 14.5px; margin: 0px;">
            <a href="mascara_listas.html" id="reg">
              <img id="icon" src="img/list_bullets.png"/>
              <br>Listas</br>
@@ -173,7 +174,7 @@
          </button>
        </li>
        <li class="columns">
-         <button id="usuarios" class="btn-regular" style="padding-left: 8px; padding-right: 8px; margin: 0px;">
+         <button id="usuarios" class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px; padding-left: 8px; padding-right: 8px; margin: 0px;">
            <a href="mascara_usuarios.html" id="reg">
              <img id="icon" src="img/user.png"/>
              <br>Usuarios</br>
