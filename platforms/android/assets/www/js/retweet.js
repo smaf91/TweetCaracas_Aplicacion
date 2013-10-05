@@ -1,0 +1,17 @@
+function retweet(id){
+    var usuario = localStorage['usuario_autenticado'];
+    var http_request = new XMLHttpRequest();
+    
+    
+    // http_request.onreadystatechange  = function(){
+    // 	if (http_request.readyState == 4  ){
+    // redireccionar
+    // 	    }
+    // 	}
+    
+    var data_file = "http://0.0.0.0:8000/"+ usuario +"/tweet/" + "id="+id+"/";
+    alert(id);
+    http_request.open("POST", data_file, false);
+    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
+    http_request.send();    
+};

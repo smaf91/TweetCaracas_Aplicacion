@@ -2,7 +2,8 @@ $(document).ready(function(){
     
     cargar_tweets("timeline");
 
-    var data_file = "http://0.0.0.0:8000/offi91/conjunto_columnas/"
+    var usuario = localStorage['usuario_autenticado'];
+    var data_file = "http://0.0.0.0:8000/"+ usuario +"/conjunto_columnas/"
     var http_request = new XMLHttpRequest();
     
     
