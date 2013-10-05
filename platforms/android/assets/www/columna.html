@@ -12,8 +12,9 @@
     <script type="text/javascript" src="js/base64.js"> </script>
     <script type="text/javascript" src="js/twittear.js"> </script>
     <script type="text/javascript" src="js/enviar_dm.js"> </script>
-<!--      <script type="text/javascript" src="js/cargar_columnas.js"> </script> --> -->
+<!--     <script type="text/javascript" src="js/cargar_columnas.js"> </script> -->
 <!--     <script type="text/javascript" src="js/cargar_tweets.js"> </script>  -->
+    <script src="js/buscador.js"></script>
     <script src="js/jquery.bxslider.js"></script>   <!-- bxSlider Javascript file -->
 
     <link href="css/jquery.bxslider.css" rel="stylesheet" />   <!-- bxSlider CSS file -->
@@ -54,10 +55,10 @@
 	    </ul>
 	  </div>
 	  
-	  <form class="form-search" style="margin:0px;padding: 0px">
-	    <input id="searchbar" placeholder="Buscar" type="text" class="input-medium search-query" 
+	  <form id="form-search" class="form-search" style="margin:0px;padding: 0px">
+	    <input id="searchbar" name="busqueda" placeholder="Buscar" type="text" class="input-medium search-query" 
 		   style="width:75%; margin: 5px;" data-provide="typeahead"/>
-	    <button type="submit" class="btn btn-warning" style="padding:7px; float: rigth; margin: 0px">
+	    <button onClick="buscar()" type="submit" data-toggle="modal" data-target="#modal-busqueda" class="btn btn-warning" style="padding:7px; float: rigth; margin: 0px">
 	      <i class="icon-search icon-white" ></i></button>
 	  </form>
 	  
@@ -151,7 +152,7 @@
             </div>
 	  </form>
 	</div>
-
+	
 	<script type="text/javascript">
 	  $('#datetimepicker').datetimepicker({
 	  format: 'dd/MM/yyyy hh:mm:ss',

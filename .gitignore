@@ -3,6 +3,7 @@
 *~
 *_
 *.class
+.save
 platforms/android/bin/classes/R.java.d
 platforms/android/bin/tweetcaracas-debug-unaligned.apk
 platforms/android/bin/tweetcaracas.apk
