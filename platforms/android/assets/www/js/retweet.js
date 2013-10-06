@@ -9,9 +9,8 @@ function retweet(id){
     // 	    }
     // 	}
     
-    var data_file = "http://0.0.0.0:8000/"+ usuario +"/tweet/" + "id="+id+"/";
-    alert(id);
-    http_request.open("POST", data_file, false);
+    var data_file = "http://0.0.0.0:8000/"+ usuario +"/tweet/" + "?id="+id;
+    http_request.open("PUT", data_file, false)
     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
     http_request.send();    
 };
