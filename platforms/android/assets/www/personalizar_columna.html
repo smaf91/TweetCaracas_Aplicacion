@@ -78,7 +78,7 @@
               <ul class="columns" style="margin-bottom: 10px">
                 <li class="columns">
                   <button class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px; padding-left: 8.5px; padding-right: 8.5px; margin: 0px; margin-top: 15px;">
-                   <a href="hashtags.html" id="reg">
+                   <a onClick='cambiar_tipo("hashtag")' href="usuarios.html" id="reg">
                     <img id="icon" src="img/hash.svg"/>
                     <br>Hashtag</br>
                   </a>
@@ -94,7 +94,7 @@
                 </li>
                 <li class="columns">
                   <button class="btn btn-info" style="padding-top: 5.5px; padding-bottom: 5.5px; padding-left: 8px; padding-right: 8px; margin: 0px; margin-top: 15px;">
-                    <a href="usuarios.html" id="reg">
+                    <a onClick='cambiar_tipo("usuario")' href="usuarios.html" id="reg">
                     <img id="icon" src="img/user.png"/>
                     <br>Usuarios</br>
                     </a>
@@ -125,6 +125,12 @@
     </li>
   </ul>
 </div>	      
+
+<script>
+function cambiar_tipo(tipo){
+  localStorage['tipo_columna'] = tipo;
+}
+</script>
 
 <script>
   $(document).ready(function(){
