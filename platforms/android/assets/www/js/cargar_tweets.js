@@ -32,7 +32,7 @@ function cargar_tweets(columna){
 		items = items + "<td style='padding: 0px; border: "+ result[i]['color'] +";'><b>" + result[i]['name'] + "</b>";
 		items = items + " @" + result[i]['screen_name'] + "</td>";
 		items = items + "<td style='border-color:"+result[i]['color']+";'>";
-		items = items + "<p style='text-align: right; margin-bottom: 0px; padding: 0px'>7pm</p></td>";
+		items = items + "<p style='text-align: right; margin-bottom: 0px; padding: 0px'>"+result[i]['created_at']+"</p></td>";
 		items = items + "<td style='padding: 3px; border-color:" + result[i]['color'] + " ;'>";
 		items = items + "<center>";
 		items = items + "<div class='btn-group'>";

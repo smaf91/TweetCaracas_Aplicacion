@@ -2,4 +2,13 @@
 *.jar 
 *~
 *_
+*.class
+*.prop
 
+platforms/android/bin/classes/R.java.d
+platforms/android/bin/tweetcaracas-debug-unaligned.apk
+platforms/android/bin/tweetcaracas.apk
+platforms/android/bin/build.prop
+platforms/android/bin/classes.dex
+platforms/android/bin/dexedLibs/cordova-3.0.0-e7ffe33d5951bb7a7d3965aaaa0606ac.jar
+platforms/android/bin/tweetcaracas.ap_.d

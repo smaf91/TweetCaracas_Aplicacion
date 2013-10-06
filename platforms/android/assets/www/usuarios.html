@@ -6,7 +6,11 @@
   <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"> </script>
   <script type="text/javascript" src="js/bootstrap-datetimepicker.pt-BR.js"> </script>
   <script type="text/javascript" src="js/bootstrap-typeahead.js"> </script>
-
+  <script type="text/javascript" src="js/base64.js"> </script>
+  <script type="text/javascript" src="js/twittear.js"> </script>
+  <script type="text/javascript" src="js/enviar_dm.js"> </script>
+  <script type="text/javascript" src="js/cargar_columna_usuario.js"> </script>
+  
   <link rel="stylesheet" href="css/prueba.css" type="text/css" />
   <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
   <link rel="stylesheet" href="css/bootstrap-modal.css" type="text/css"/>
@@ -22,7 +26,7 @@
   </style>
   <!-- Responsive Layout -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"/>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -46,147 +50,89 @@
       </div>
     </div>
     <div style="width:100%;height: 50px;">
-      <form class="form-search" style="float:right; padding-right:10px; padding-top:5px; margin-bottom:5px">
-        <input id="searchbar" placeholder="Buscar" type="text" class="input-medium search-query" style="width:260px" data-provide="typeahead"/>
-        <button type="submit" class="btn btn-warning" style="padding:7px">
+      <form id="form-search" class="form-search" style="padding-right:10px; padding-top:5px; margin-bottom:5px">
+        <input name="columna" id="searchbar" placeholder="Agrega una nueva columna" type="text" class="input-medium search-query" style="width: 75%" data-provide="typeahead"/>
+        <button type="submit" onClick="agregar_columna()" class="btn btn-warning" style="padding:7px">
           <i class="icon-plus icon-white" ></i>
         </button>
       </form>
     </div>
-    <div id="mask" class="hero-unit" style="padding-left: 30px;">
-      <table>
-        <td style="width:40px;" valign="top"> 
-          <a class="brand" href="perfil.html" style="padding: 0px;">
-            <a href="perfil.html">
-              <img id="logo" src="images/imported/LOGOOO.png"/>
-            </a>
-          </a>
-        </td>
-        <td style="font-size: small;"> 
-          <table>
-            <tr>
-              <b>@loremipsum</b>
-            </tr>
-            <tr>
-              <p>Loren Impsum</p>
-            </tr>
-          </table>
-        </td>
-      </table>
-    </div>
+    
+    <div id="columnas-usuario"></div>
 
-    <div id="mask" class="hero-unit" style="padding-left: 30px;">
-      <table>
-        <td style="width:40px;" valign="top"> 
-          <a class="brand" href="perfil.html" style="padding: 0px;">
-            <a href="perfil.html">
-              <img id="logo" src="images/imported/LOGOOO.png"/>
-            </a>
-          </a>
-        </td>
-        <td style="font-size: small;"> 
-          <table>
-            <tr>
-              <b>@loremaltamira</b>
-            </tr>
-            <tr>
-              <p>Lorem Altamira</p>
-            </tr>
-          </table>
-        </td>
-      </table>
-    </div>
+          <!-- Modal componer tweet     -->
+          <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
+            <form id="formT">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h3>Componer tweet</h3>
+              </div>
+              <div class="modal-body">
+                <div class="row-fluid">
+                  <label> Contenido</label>
+                  <p><textarea name="text" id="text" class="span12" rows="3" style="resize: none;"></textarea></p>
+                </div>
+                <center>
+                  <div class="btn-group">
+                    <button class="btn">
+                      <img id="icon" src="img/camera.png"/>
+                    </button>
+                    <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
+                      <img src="img/gallery.png" style="height: 33px; width: 35px"/>
+                    </button>
+                    <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
+                      <button class="btn add-on" style="height: 35px; min-width: 50px;">
+                        <img id="icon" src="img/clock.png"/>
+                      </button>
+                    </div>
+                  </div>
+                </center>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
+                <input id="enviarT" onClick="twittear()" value="Enviar" class="btn btn-warning" type="submit"/>
+              </div>
+            </form>
+          </div>
 
-    <div id="mask" class="hero-unit" style="padding-left: 30px;">
-      <table>
-        <td style="width:40px;" valign="top"> 
-          <a class="brand" href="perfil.html" style="padding: 0px;">
-            <a href="perfil.html">
-              <img id="logo" src="images/imported/LOGOOO.png"/>
-            </a>
-          </a>
-        </td>
-        <td style="font-size: small;"> 
-          <table>
-            <tr>
-              <b>@altamiraipsum</b>
-            </tr>
-            <tr>
-              <p>Altamira Ipsum</p>
-            </tr>
-          </table>
-        </td>
-      </table>
-    </div>
-
-    <!-- Modal componer tweet     -->
-    <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-        <h3>Componer tweet</h3>
-      </div>
-      <div class="modal-body">
-        <div class="row-fluid">
-          <label> Contenido</label>
-          <p><textarea class="span12" rows="3" style="resize: none;"></textarea></p>      
-        </div>
-        <center>
-          <div class="btn-group">
-            <button class="btn">
-              <img id="icon" src="img/camera.png"/>
-            </button>
-            <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
-              <img src="img/gallery.png" style="height: 33px; width: 35px"/>
-            </button>
-            <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
-              <button class="btn add-on" style="height: 35px; min-width: 50px;">
-                <img id="icon" src="img/clock.png"/>
-              </button>
+          <!--     Modal componer DM-->
+          <div id="dm" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
+            <form id="formD">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h3>Componer DM</h3>
+              </div>
+              <div class="modal-body">
+                <div class="row-fluid">
+                  <label>Usuario</label>
+                  <p><input type="text" id="user" name="user" class="span12" placeholder="@Usuario"></input></p>
+                  <label> Contenido</label>
+                  <p><textarea name="text" id="text" class="span12" rows="2" style="resize: none;"></textarea></p>
+                </div>
+                <center>
+                  <div class="btn-group">
+                    <button class="btn">
+                      <img id="icon" src="img/camera.png"/>
+                    </button>
+                    <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
+                      <img src="img/gallery.png" style="height: 33px; width: 35px"/>
+                    </button>
+                    <!--            <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
+                                    <button class="btn add-on" style="height: 35px; min-width: 50px;">
+                                      <img id="icon" src="img/clock.png"/>
+                                    </button>
+                    </div>-->
+                  </div>
+                </center>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
+                <button type="submit" onClick="dm()" id="enviarD" class="btn btn-warning">Enviar</button>
+              </div>
             </div>
-          </div>
-        </center>
-      </div>
-      <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
-        <button type="button" class="btn btn-warning">Enviar</button>
-      </div>
-    </div>
-
-    <!--     Modal componer DM-->
-    <div id="dm" class="modal hide fade" tabindex="-1" data-width="760" style="margin-top: 10%">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-        <h3>Componer DM</h3>
-      </div>
-      <div class="modal-body">
-        <div class="row-fluid">
-          <label>Usuario</label>
-          <p><input type="text" class="span12" placeholder="@Usuario"></input></p>
-          <label> Contenido</label>
-          <p><textarea class="span12" rows="2" style="resize: none;"></textarea></p>      
+          </form>
         </div>
-        <center>
-          <div class="btn-group">
-            <button class="btn">
-              <img id="icon" src="img/camera.png"/>
-            </button>
-            <button class="btn" style="padding-top: 0px; padding-bottom: 0px">
-              <img src="img/gallery.png" style="height: 33px; width: 35px"/>
-            </button>
-<!--            <div id="datetimepicker" class="input-append date" style="margin-bottom: 0px">
-              <button class="btn add-on" style="height: 35px; min-width: 50px;">
-                <img id="icon" src="img/clock.png"/>
-              </button>
-            </div>-->
-          </div>
-        </center>
-      </div>
-      <div class="modal-footer">
-        <button type="button" data-dismiss="modal" class="btn">Cerrar</button>
-        <button type="button" class="btn btn-warning">Enviar</button>
-      </div>
-    </div>
-  </div>
+
 
   <script type="text/javascript">
   $('#datetimepicker').datetimepicker({
