@@ -18,6 +18,12 @@
     <script src="js/buscador.js"></script>
     <script src="js/jquery.bxslider.js"></script>   <!-- bxSlider Javascript file -->
 
+    <script>
+      $(document).ready(function(){
+      $('.limit').limit()
+      });
+    </script>
+
     <link href="css/jquery.bxslider.css" rel="stylesheet" />   <!-- bxSlider CSS file -->
     <link rel="stylesheet" href="css/prueba.css" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
@@ -91,7 +97,11 @@
               <div class="modal-body">
                 <div class="row-fluid">
                   <label> Contenido</label>
-                  <p><textarea name="text" id="text" class="span12" rows="3" style="resize: none;"></textarea></p>
+                  <p>
+		    <textarea  data-provide="limit" data-counter="#counter" name="text" id="text" class="span12" rows="3" style="resize: none;">
+		    </textarea>
+		    <em id="counter"></em>
+		  </p>
                 </div>
                 <center>
                   <div class="btn-group">

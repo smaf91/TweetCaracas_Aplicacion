@@ -3,7 +3,7 @@ $(document).ready(function(){
     cargar_tweets("timeline");
 
     var usuario = localStorage['usuario_autenticado'];
-    var data_file = "http://0.0.0.0:8000/"+ usuario +"/conjunto_columnas/"
+    var data_file = "http://192.168.1.100:8000/"+ usuario +"/conjunto_columnas/"
     var http_request = new XMLHttpRequest();
     
     
@@ -48,8 +48,7 @@ $(document).ready(function(){
     
 
     http_request.open("GET", data_file, false);
-    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
-    //     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("smaf91" + ':' + "12345"));
+    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(localStorage['usuario_autenticado'] + ':' + localStorage['clave']));
     http_request.send();    
     $('.bxslider').bxSlider();	
     
