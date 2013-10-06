@@ -23,6 +23,7 @@ $(document).ready(function(){
       $( "<ul/>", {
         "class":"my-new-list",
         "style": "margin: 0px 0px 0px 0px",
+        "id": result[i]['nombre'],
         html: items.join("")
       }).appendTo("#listas");
     }
@@ -36,11 +37,11 @@ $(document).ready(function(){
 function eliminar_lista(nombre_lista) {
   
   var usuario = localStorage['usuario_autenticado'];
-  alert("eliminando: "+nombre_lista);
+//   alert("eliminando: "+nombre_lista);
   var data_file = "http://0.0.0.0:8000/"+usuario+"/listas_activas/n="+nombre_lista+"/";
   var http_request = new XMLHttpRequest();
   
+  document.getElementById(nombre_lista).remove();
   http_request.open("DELETE", data_file, false);
   http_request.send();
-  document.location.reload(true);
 }

@@ -9,7 +9,7 @@ $(document).ready(function(){
       
       for (var i=0; i < result.length; i ++) {
         var items = [];
-        items.push("<div id='mask' class='hero-unit' style='padding-left: 30px;'><table style='width: 100%'><td style='width:40px;' valign='top'> <button onClick='borrar_columna(\""+result[i]+"\")' id='borrar' class='btn btn-danger' style='margin: 10px; padding: 5px; padding-bottom: 0px; padding-top: 0px'> x </button></td><td style='font-size: small; width: 75%'><table><tr><p>"+result[i]+"</p></tr></table></td><td><button style='float-right' id='ver' onClick='ver_columna(\""+result[i]+"\")' class='btn btn-primary'> Editar </button></td</table></div>");
+        items.push("<div id="+result[i]+"><div id='mask' class='hero-unit' style='padding-left: 30px;'><table style='width: 100%'><td style='width:40px;' valign='top'> <button onClick='borrar_columna(\""+result[i]+"\")' id='borrar' class='btn btn-danger' style='margin: 10px; padding: 5px; padding-bottom: 0px; padding-top: 0px'> x </button></td><td style='font-size: small; width: 75%'><table><tr><p>"+result[i]+"</p></tr></table></td><td><button style='float-right' id='ver' onClick='ver_columna(\""+result[i]+"\")' class='btn btn-primary'> Editar </button></td</table></div>");
         
         $(items).appendTo("#columnas-usuario");
       }
@@ -38,7 +38,7 @@ function borrar_columna(columna) {
   var data_file = "http://0.0.0.0:8000/"+usuario+"/conjunto_columnas/"+columna+"/tipo="+localStorage['tipo_columna']+"/";
   var http_request = new XMLHttpRequest();
   
-  document.location.reload(true);
+  document.getElementById(columna).remove();
   http_request.open("DELETE", data_file, false);
   http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(localStorage['usuario_autenticado'] + ':' + localStorage['clave']));
   http_request.send();
