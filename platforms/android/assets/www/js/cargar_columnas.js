@@ -48,8 +48,7 @@ $(document).ready(function(){
     
 
     http_request.open("GET", data_file, false);
-    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
-    //     http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("smaf91" + ':' + "12345"));
+    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(localStorage['usuario_autenticado'] + ':' + localStorage['clave']));
     http_request.send();    
     $('.bxslider').bxSlider();	
     
