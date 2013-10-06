@@ -15,13 +15,12 @@
     <script type="text/javascript" src="js/enviar_dm.js"> </script>
     <script type="text/javascript" src="js/cargar_columnas.js"> </script>
     <script type="text/javascript" src="js/cargar_tweets.js"> </script> 
+    <script type="text/javascript" src="js/bootstrap-limit.js"> </script>
     <script src="js/buscador.js"></script>
     <script src="js/jquery.bxslider.js"></script>   <!-- bxSlider Javascript file -->
 
     <script>
-      $(document).ready(function(){
-      $('.limit').limit()
-      });
+      $('.limit').limit();
     </script>
 
     <link href="css/jquery.bxslider.css" rel="stylesheet" />   <!-- bxSlider CSS file -->
@@ -97,12 +96,9 @@
               <div class="modal-body">
                 <div class="row-fluid">
                   <label> Contenido</label>
-                  <p>
-		    <textarea  data-provide="limit" data-counter="#counter" name="text" id="text" class="span12" rows="3" style="resize: none;">
-		    </textarea>
-		    <em id="counter"></em>
-		  </p>
+		  <textarea  name="text" id="text" class="span12" rows="3" style="resize: none;" data-provide="limit" data-counter="#counter" ></textarea>
                 </div>
+		<p id="counter"></p>
                 <center>
                   <div class="btn-group">
                     <button class="btn">
