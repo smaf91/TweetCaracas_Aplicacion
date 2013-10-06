@@ -31,6 +31,7 @@ function agregar_usuario() {
   var usuario = localStorage['usuario_autenticado'];
   var valor = $("#form-search").serializeArray()[0]['value'];
   var data_file = "http://0.0.0.0:8000/"+usuario+"/conjunto_columnas/"+nombre_columna+"/tipo="+tipo+"/v="+valor+"/";
+    alert(valor);
   var http_request = new XMLHttpRequest();
 
   http_request.open("POST", data_file, false);

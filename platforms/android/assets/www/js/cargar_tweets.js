@@ -53,7 +53,7 @@ function cargar_tweets(columna){
 		items = items + "</td>";
 		items = items + "</tr>";
 		items = items + "<td colspan='3' style='padding: 0px; border-color: "+result[i]['color']+";'>";
-		items = items + " " + result[i]['text'] + " -->"+ result[i]['id'];
+		items = items + " " + result[i]['text'];
 		items = items + "</td> </table> </div>";		
 
 		var target = "#" + columna;
@@ -68,7 +68,7 @@ function cargar_tweets(columna){
     }
 
     http_request.open("GET", data_file, false);
-    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
+    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(localStorage['usuario_autenticado'] + ':' + localStorage['clave']));
     http_request.send();
 
 }

@@ -5,6 +5,6 @@ function twittear(){
     var http_request = new XMLHttpRequest();
     
     http_request.open("POST", data_file, false);
-    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
+    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(localStorage['usuario_autenticado'] + ':' + localStorage['clave']));
     http_request.send();
 }
