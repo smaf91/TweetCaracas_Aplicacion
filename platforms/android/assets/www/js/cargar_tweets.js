@@ -13,7 +13,6 @@ function cargar_tweets(columna){
 	{	    
 
 	    var result = JSON.parse(http_request.responseText);
-
 	    // result variable now contains the data structure and can
 	    // be accessed as result.name and result.country.
 

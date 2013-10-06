@@ -9,7 +9,7 @@ $(document).ready(function(){
       
       for (var i=0; i < result.length; i ++) {
         var items = [];
-        items.push("<div id="+result[i]+"><div id='mask' class='hero-unit' style='padding-left: 30px;'><table style='width: 100%'><td style='width:40px;' valign='top'> <button onClick='borrar_columna(\""+result[i]+"\")' id='borrar' class='btn btn-danger' style='margin: 10px; padding: 5px; padding-bottom: 0px; padding-top: 0px'> x </button></td><td style='font-size: small; width: 75%'><table><tr><p>"+result[i]+"</p></tr></table></td><td><button style='float-right' id='ver' onClick='ver_columna(\""+result[i]+"\")' class='btn btn-primary'> Editar </button></td</table></div>");
+        items.push("<div id='"+result[i]+"'><div id='mask' class='hero-unit' style='padding-left: 30px;'><table style='width: 100%'><td style='width:40px;' valign='top'> <button onClick='borrar_columna(\""+result[i]+"\")' id='borrar' class='btn btn-danger' style='margin: 10px; padding: 5px; padding-bottom: 0px; padding-top: 0px'> x </button></td><td style='font-size: small; width: 75%'><table><tr><p>"+result[i]+"</p></tr></table></td><td><button style='float-right' id='ver' onClick='ver_columna(\""+result[i]+"\")' class='btn btn-primary'> Editar </button></td</table></div>");
         
         $(items).appendTo("#columnas-usuario");
       }
