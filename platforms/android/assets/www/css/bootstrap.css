@@ -8,6 +8,8 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } 
+
 .clearfix {
   *zoom: 1;
 }
