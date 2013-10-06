@@ -39,8 +39,8 @@ function cargar_tweets(columna){
 		items = items + "<button class='btn' style='padding: 2px'>";
 		items = items + "<i class='icon-share-alt'></i>";
 		items = items + "</button>";
-		items = items + "<button class='btn' id='rt' style='padding: 2px'>";
-		items = items + "<i class='icon-retweet'><input type='hidden' name='id' value='"+result[i]['id']+"'/></i>";
+		items = items + "<button class='btn' id='rt' onClick=retweet('"+result[i]['id']+"') style='padding: 2px'>";
+		items = items + "<i class='icon-retweet'></i>";
 		items = items + "</button>";
 		items = items + "<button class='btn' style='padding: 2px'>";
 		items = items + "<i class='icon-star'></i>";
@@ -53,7 +53,7 @@ function cargar_tweets(columna){
 		items = items + "</td>";
 		items = items + "</tr>";
 		items = items + "<td colspan='3' style='padding: 0px; border-color: "+result[i]['color']+";'>";
-		items = items + " " + result[i]['text'] + " ";
+		items = items + " " + result[i]['text'];
 		items = items + "</td> </table> </div>";		
 
 		var target = "#" + columna;
@@ -68,7 +68,7 @@ function cargar_tweets(columna){
     }
 
     http_request.open("GET", data_file, false);
-    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode("offi91" + ':' + "12345"));
+    http_request.setRequestHeader('Authorization', "Basic " + Base64.encode(localStorage['usuario_autenticado'] + ':' + localStorage['clave']));
     http_request.send();
 
 }
