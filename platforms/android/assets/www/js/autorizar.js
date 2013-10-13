@@ -11,14 +11,14 @@ $(document).ready(function(){
       var result = JSON.parse(http_request.responseText);
       json_usuario = result;
       var items = [];
-      items.push(result['url'])
-      $("<ul/>", {
-        html: items.join("")
-        }).appendTo("#link")
+      items.push("<a href='"+result['url']+"'>link</a>");
+      document.getElementById("URL").remove();
+      $(items).appendTo("#link");
+      
     }
   }
 
-  http_request.open("POST", data_file, true);
+  http_request.open("POST", data_file, false);
   http_request.send();
   });
 });
@@ -33,7 +33,7 @@ $(document).ready(function(){
   json_usuario['pin'] = objeto_serializado[3]['value'];
   data_file = data_file + "p="+json_usuario['pin']+"/";
   
-  http_request.open("POST", data_file, true);
+  http_request.open("POST", data_file, false);
   http_request.send();
   });
 });
